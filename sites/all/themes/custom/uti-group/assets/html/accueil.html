@@ -18,6 +18,7 @@
 <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
 <script src="../js/plugins/modernizr.custom.js"></script>
 <script src="../js/plugins/respond.js"></script>
+
 </head>
 <body class="body">
 	<div class="body-wrapper">
@@ -45,10 +46,17 @@
 		<div class="main">
 			<div class="main-wrapper">
 				<section class="slideshow">
-					<img src="../img/slideshow/slide1.jpg" />
+					<div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 784px; height: 346px;">
+                        <!-- Slides Container -->
+    <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 784px; height: 346px;">
+        <div><img u="image" src="../img/slideshow/slide1.jpg" /></div>
+        <div><img u="image" src="../img/slideshow/slide2.jpg" /></div>
+		<div><img u="image" src="../img/slideshow/slide3.jpg" /></div>
+        <div><img u="image" src="../img/slideshow/slide4.jpg" /></div>
+    </div>		
 				</section>
 				<section class="fil-actu">texte texte texte texte texte</section>
-				<section class="nos-client"><img src="../img/logo-mutuelle.jpg" /></section>
+				<section class="nos-client"><a href="#"><img src="../img/logo-mutuelle.jpg" /><a/></section>
 				<section class="dernieres-offres">
 					<h2 class="titre">Nos dernières offres d'emploi</h2>
 					<ul>
@@ -78,6 +86,7 @@
 		</footer>
 	</div>
 <script type="text/javascript" src="../js/jQuery/jquery.min.js"></script>
+<script src="../js/plugins/jssor.slider.mini.js"></script>
 <script type="text/javascript" src="../js/script.js"></script>
 </body>
 </html>
