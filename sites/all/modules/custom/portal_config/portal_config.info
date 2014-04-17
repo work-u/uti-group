@@ -1,0 +1,6 @@
+name = Configuration Portail
+description = Configuration du portail.
+version = 7.x-1.0
+core = 7.x
+files[] = portal_config.module
+package =  DRS

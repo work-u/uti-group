@@ -1,0 +1,153 @@
+<?php
+
+/**
+ * @file
+ * DRS Footer Form
+ */
+
+/**
+ * Get Footer Select.
+ * @return mixed
+ *   could be mixed.
+ */
+function footer_select() {
+  $sf_select_choice = variable_get('sf_select_choice', '');
+  if ($sf_select_choice != '') {
+    $line_select = explode(chr(13), $sf_select_choice);
+    foreach ($line_select as $lines) {
+      $line = explode('|', trim($lines));
+      $sl_values[$line[0]] = $line[1];
+      $sl_action[$line[0]] = $line[2];
+    }
+  }
+  return array('actions' => $sl_action, 'values' => $sl_values);
+}
+
+/**
+ * Form Footer.
+ * @global type $sl_values
+ * @return mixed
+ *   array of arguments
+ */
+function drs_form_footer() {
+  $selected = footer_select();
+  $form['#prefix'] = '<div id="form_newsletter">';
+  $form['#suffix'] = '</div>';
+  $form['#theme'] = 'drs';
+  $form['#attributes'] = array('class' => 'form-newsletter');
+  $form['DynPages_Code'] = array(
+    '#type' => 'select',
+    '#title' => t('Abonnez-vous à nos publications'),
+    '#title_display' => 'invisible',
+    '#options' => $selected['values'],
+    '#attributes' => array('class' => array('custom', 'replaced')));
+  $form['CALL_METHOD'] = array(
+    '#type' => 'hidden',
+    '#title' => '',
+    '#value' => 'POST');
+  $form['WS'] = array(
+    '#type' => 'hidden',
+    '#title' => '',
+    '#value' => '0_');
+  $form['WT'] = array(
+    '#type' => 'hidden',
+    '#title' => '',
+    '#value' => '84935774-41f7-4597-8081-ce342caf228c');
+  $form['EMAIL'] = array(
+    '#type' => 'textfield', '#title' => '',
+    '#attributes' => array(
+      'code' => 'EMAIL',
+      'placeholder' => t('Saisissez votre adresse email'),
+      'type' => 'mail'));
+  $form['submit'] = array(
+    '#type' => 'submit', '#value' => t('OK'),
+    '#attributes' => array('class' => array("btn", "btn-big")));
+  $form['#submit'] = array('footer_form_submit');
+  $form['#validate'] = array('footer_form_validate');
+  return $form;
+}
+
+/**
+ * Validate Form.
+ * 
+ * @param mixed $form 
+ *   form object.
+ * 
+ * @param mixed $form_state 
+ *   form_state.
+ * 
+ * @return null
+ *   return null.
+ */
+function footer_form_validate($form, $form_state) {
+  $email = $form_state['values']['EMAIL'];
+  if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    $error = t('Adresse Mail Erroné');
+    form_set_error('EMAIL', $error);
+    $options = array('query' => drupal_get_query_parameters());
+    $currentPath = (current_path() == 'node' ? '' : current_path());
+    drupal_goto($currentPath ,$options);
+  }
+}
+
+/**
+ * Redirect after validate.
+ * @global type $sl_action
+ * 
+ * @param mixed $form
+ *   form object.
+ * 
+ * @param mixed $form_state
+ *   form_state.
+ * 
+ * @return null
+ *   return null.
+ */
+function footer_form_submit($form, $form_state) {
+    $selected = footer_select();
+    $action = $selected['actions'][$form_state['values']['DynPages_Code']];
+
+    if(send_data_without_json($form_state['values'], $action)) {
+      drupal_set_message(t('Registration successful.'));
+    }
+    else {
+      form_set_error('', t('Problem with registration'));
+    } 
+  
+    $options = array('query' => drupal_get_query_parameters());
+    $currentPath = (current_path() == 'node' ? '' : current_path());
+    drupal_goto($currentPath ,$options);
+}
+
+/**
+ * Send data to Dispatcher webservices without json.
+ * 
+ * @param mixed $data
+ *   data.
+ * 
+ * @param mixed $url
+ *   url.
+ * 
+ * @return mixed 
+ *   return boolean.
+ */
+function send_data_without_json($data, $url = '') {
+  $data = http_build_query($data);
+  $context_options = array(
+    'http' => array(
+      'method' => 'POST',
+      'ignore_errors' => TRUE,
+      'header' => "Content-type: application/x-www-form-urlencoded\r\n"
+      . "Content-Length: " . strlen($data) . "\r\n",
+      'content' => $data),
+  );
+  $context = stream_context_create($context_options);
+  $fp = @fopen($url, 'rb', FALSE, $context);
+  $meta = stream_get_meta_data($fp);
+  if ($fp && strpos($meta['wrapper_data'][0], 'HTTP/1.1 2') !== FALSE) {
+    $resp = stream_get_contents($fp);
+    fclose($fp);
+    return $resp;
+  }
+  return FALSE;
+}

@@ -1,0 +1,450 @@
+<?php
+
+/**
+ * @file
+ * Module portal_config
+ * Configuration des destinataires des emails dans le formulaire de contact ...
+ */
+
+/**
+ * Hook Permission Enter description here ...
+ * @return mixed
+ *   Description.
+ */
+function portal_config_permission() {
+  return array(
+    'access configuration portail' => array(
+      'title' => t('Administer Portail Config'),
+    ),
+  );
+}
+
+/**
+ * Création du menu portal_config.
+ * @return mixed
+ *   Description.
+ */
+function portal_config_menu() {
+  $items['admin/portal_config'] = array(
+    'title' => 'Config Portail',
+    'title callback' => 'Config Portail',
+    'page callback' => 'get_form_config_portal',
+    'access arguments' => array('access configuration portail'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  return $items;
+}
+
+/**
+ * Génération du formulaire de configuration des destinataires.
+ * @return mixed
+ *   Description.
+ */
+function form_config_portal() {
+  $form = array();
+
+  /*
+   * URL URL site caisse des dépôts et consignations
+   */
+  $form['sf_url_site_caisse'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Configuration Url Site fund Deposits and Consignment'),
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );
+  $form['sf_url_site_caisse']['sf_url_site_caisse_title'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Url Title'),
+    '#default_value' => variable_get('sf_url_site_caisse_title', ''),
+  );
+  $form['sf_url_site_caisse']['sf_url_site_caisse_link'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Url link'),
+    '#default_value' => variable_get('sf_url_site_caisse_link', ''),
+  );
+
+  /*
+   * URL espace personnalisé actif/retraité
+   */
+  $form['sf_url_espace_personnalise_actif_retraite'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Configuration Url Personal Space Active / Retirement'),
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );
+  $form['sf_url_espace_personnalise_actif_retraite']['sf_url_espace_personnalise_actif_retraite_title'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Url Title'),
+    '#default_value' => variable_get('sf_url_espace_personnalise_actif_retraite', ''),
+  );
+  $form['sf_url_espace_personnalise_actif_retraite']['sf_url_espace_personnalise_actif_retraite_link'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Url link'),
+    '#default_value' => variable_get('sf_url_espace_personnalise_actif_retraite_link', ''),
+  );
+  /*
+   * URL espace personnalisé employeur
+   */
+  $form['sf_url_espace_personnalise_employeur'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Configuration Url Personal Space Employer'),
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );
+  $form['sf_url_espace_personnalise_employeur']['sf_url_espace_personnalise_employeur_title'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Url Title'),
+    '#default_value' => variable_get('sf_url_espace_personnalise_employeur', ''),
+  );
+  $form['sf_url_espace_personnalise_employeur']['sf_url_espace_personnalise_employeur_link'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Url link'),
+    '#default_value' => variable_get('sf_url_espace_personnalise_employeur_link', ''),
+  );
+
+  /*
+   *  texte pied de page*
+   */
+  $form['sf_texte_pied_page'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Configuration Text Footer'),
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );
+  $form['sf_texte_pied_page']['sf_rss'] = array(
+    '#type' => 'textfield',
+    '#title' => t('RSS Link'),
+    '#default_value' => variable_get('sf_rss', '/rss'),
+  );
+  $form['sf_texte_pied_page']['sf_tumblr'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Tumblr Link'),
+    '#default_value' => variable_get('sf_tumblr', ''),
+  );
+  $form['sf_texte_pied_page']['sf_texte_pied_page_body'] = array(
+    '#type' => 'textarea',
+    '#title' => t('Block body'),
+    '#default_value' => variable_get('sf_texte_pied_page_body', ''),
+  );
+  $form['sf_texte_pied_page']['form'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Configuration Footer Form'),
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );
+  $form['sf_texte_pied_page']['form']['sf_titre_form_footer'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Form Label'),
+    '#default_value' => variable_get('sf_titre_form_footer', ''),
+  );
+
+  $form['sf_texte_pied_page']['form']['sf_select_choice'] = array(
+    '#type' => 'textarea',
+    '#title' => t('Subscription Select Options'),
+    '#description' => t('Subscription Select Options must be inserted like this : {value}|{label}|{url_action_form} For example : DS12112012131602|QRS Les études|http://information.caissedesdepotsretraites.fr/CDCBORDEAUX/QRS/Form_insc_QRS.cfm'),
+    '#default_value' => variable_get('sf_select_choice', 'DS12112012131602|QRS Les études|http://information.caissedesdepotsretraites.fr/CDCBORDEAUX/QRS/Form_insc_QRS.cfm
+DS27012014143238|L3i|http://information.caissedesdepotsretraites.fr/CDCBORDEAUX/L3I/web_abonnt_L3I.cfm'),
+  );
+  /*
+   * image une
+   */
+  $form['sf_image_une'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Configuration Image Headline'),
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );
+  $form['sf_image_une']['sf_image_une_title'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Image Title'),
+    '#default_value' => variable_get('sf_image_une_title', ''),
+  );
+  /*
+   * Image
+   */
+  $form['sf_image_une']['sf_image_une_file'] = array(
+    '#title' => t('Image'),
+    '#type' => 'managed_file',
+    '#description' => '',
+    '#default_value' => variable_get('sf_image_une_file', ''),
+    '#upload_location' => 'public://',
+    '#submit' => 'image_file_permanent',
+  );
+  /*
+   * texte une
+   */
+  $form['sf_texte_une'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Configuration Text Headline'),
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );
+  $form['sf_texte_une']['sf_texte_une_title'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Block Title'),
+    '#default_value' => variable_get('sf_texte_une_title', ''),
+  );
+  $form['sf_texte_une']['sf_texte_une_body'] = array(
+    '#type' => 'textarea',
+    '#title' => t('Block body'),
+    '#default_value' => variable_get('sf_texte_une_body', ''),
+  );
+
+  /*
+   * lien une
+   */
+  $form['sf_lien_une'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Configuration Url Headline'),
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );
+  $form['sf_lien_une']['sf_lien_une_title'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Url Title'),
+    '#default_value' => variable_get('sf_lien_une_title', ''),
+  );
+  $form['sf_lien_une']['sf_lien_une_link'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Url link'),
+    '#default_value' => variable_get('sf_lien_une_link', ''),
+  );
+
+  /*
+   * Trouver son régime de retraite
+   */
+  $form['sf_find_regime_retraite'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Configuration page "Trouver son régime de retraite"'),
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );
+  $form['sf_find_regime_retraite']['sf_descrip_find_regime_de_retraite'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Description de la page "Trouver régime de retraite"'),
+    '#default_value' => variable_get('sf_descrip_find_regime_de_retraite', ' <h2 class="block-title">Connaissez-vous votre régime de retraite ?</h2>'),
+  );
+
+  $form['sf_find_regime_retraite']['sf_lien_discover_ircantc_descrip'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Description ircantc régime'),
+    '#default_value' => variable_get('sf_lien_discover_ircantc_descrip', ' <p>Vous êtes rataché au régime de l\'<strong>ircantec</strong></p>'),
+  );
+  $form['sf_find_regime_retraite']['sf_lien_discover_ircantc_title'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Url Title discover ircantc'),
+    '#default_value' => variable_get('sf_lien_discover_ircantc_title', 'Découvrir l\'ircantc'),
+  );
+  $form['sf_find_regime_retraite']['sf_lien_discover_ircantc_link'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Url link discover ircantc'),
+    '#default_value' => variable_get('sf_lien_discover_ircantc_link', '#'),
+  );
+
+  $form['sf_find_regime_retraite']['sf_lien_access_to_ircantc_title'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Url Title access to ircantc'),
+    '#default_value' => variable_get('sf_lien_access_to_ircantc_title', 'Accéder au site de l\'ircantec'),
+  );
+  $form['sf_find_regime_retraite']['sf_lien_access_to_ircantc_link'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Url link access to ircantc'),
+    '#default_value' => variable_get('sf_lien_access_to_ircantc_link', '#'),
+  );
+  $form['sf_find_regime_retraite']['sf_lien_see_annimation_allover_his_carrier_title'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Title link see annimation all over his carrier'),
+    '#default_value' => variable_get('sf_lien_see_annimation_allover_his_carrier_title', 'Voir l\'animation<br />
+            &laquo;&nbsp;Tout au long de sa carrière&nbsp;&raquo;'),
+  );
+  $form['sf_find_regime_retraite']['sf_lien_see_annimation_allover_his_carrier'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Url link see annimation all over his carrier'),
+    '#default_value' => variable_get('sf_lien_see_annimation_allover_his_carrier', '#'),
+  );
+  /*
+   * Page Accueil : Comprendre le régime des retraites
+   */
+  /*
+   * node article Comprendre le régime des retraites
+   */
+  $form['sf_node_article'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Configuration node article Understanding of the pension system'),
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );
+  $form['sf_node_article']['sf_node_article_title'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Block Title'),
+    '#default_value' => variable_get('sf_node_article_title', ''),
+  );
+  $form['sf_node_article']['sf_node_article_link'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Url link'),
+    '#default_value' => variable_get('sf_node_article_link', ''),
+  );
+  /*
+   * Page Services : Trouvé son Regime retraite
+   */
+  $form['page_service'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Configuration page "Services"'),
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );
+  /*
+   * Find regime retirement
+   */
+  $form['page_service']['block_explain_pension_sys'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Configuration Media Pages'),
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );
+  /*
+   * Explain pension system URL
+   */
+  $form['page_service']['block_explain_pension_sys']['service_explain_pension'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Article Link : Explain pension system'),
+    '#default_value' => variable_get('service_explain_pension', ''),
+  );
+  /*
+   * Explain pension system URL
+   */
+  $form['page_service']['block_explain_pension_sys']['service_find_pension'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Article Link : Find pension'),
+    '#default_value' => variable_get('service_find_pension', ''),
+  );
+
+  
+  /*
+   * Explain pension system URL.
+   */
+  $form['page_service']['block_explain_pension_sys']['service_throughout_career'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Article Link: Throughout his career'),
+    '#default_value' => variable_get('service_throughout_career', ''),
+  );
+  /*
+   * Page Contact Fieldset.
+   */
+  $form['page_contact'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Configuration page "Services"'),
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );
+  /*
+   * Contact Text Field.
+   */
+  $contact_field = variable_get('contact_field', '');
+  $form['page_contact']['contact_field'] = array(
+    '#title' => t('Contact Text'),
+    '#default_value' => ($contact_field != '') ? $contact_field['value'] : '',
+    '#format' => 'full_html',
+    '#type' => 'text_format',
+  );
+
+  /*
+   * Page Contact Fieldset.
+   */
+  $form['page_presentation'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Configuration page "Presentation"'),
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );
+  /*
+   * Explain pension system URL.
+   */
+  $form['page_presentation']['presentation_bloc_1'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Presentation Link bloc 1'),
+    '#default_value' => variable_get('presentation_bloc_1', ''),
+    '#description' => t('Link must be like this node/xxx with xxx => nid'),
+
+  );
+  /*
+   * Explain pension system URL.
+   */
+  $form['page_presentation']['presentation_bloc_2'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Presentation Link bloc 2'),
+    '#default_value' => variable_get('presentation_bloc_2', ''),
+    '#description' => t('Link must be like this node/xxx with xxx => nid'),
+
+  );
+  /*
+   * Explain pension system URL.
+   */
+  $form['page_presentation']['presentation_bloc_3'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Presentation Link bloc 3'),
+    '#default_value' => variable_get('presentation_bloc_3', ''),
+    '#description' => t('Link must be like this node/xxx with xxx => nid'),
+  );
+  /*
+   * Explain pension system URL.
+   */
+  $form['page_presentation']['presentation_bloc_4'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Presentation Link bloc 4'),
+    '#default_value' => variable_get('presentation_bloc_4', ''),
+    '#description' => t('Link must be like this node/xxx with xxx => nid'),
+  );
+  /*
+   * Explain pension system URL.
+   */
+  $form['page_presentation']['presentation_bloc_5'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Presentation Link bloc 5'),
+    '#default_value' => variable_get('presentation_bloc_5', ''),
+    '#description' => t('Link must be like this node/xxx with xxx => nid'),
+  );
+  /*
+   * Explain pension system URL.
+   */
+  $form['page_presentation']['presentation_bloc_6'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Presentation Link bloc 6'),
+    '#default_value' => variable_get('presentation_bloc_6', ''),
+    '#description' => t('Link must be like this node/xxx with xxx => nid'),
+  );
+
+  $form['#submit'][] = 'image_file_permanent';
+  return system_settings_form($form);
+}
+
+/**
+ * Retourner le formulaire de configuration.
+ * @return mixed
+ *   Description.
+ */
+function get_form_config_portal() {
+  return drupal_get_form('form_config_portal');
+}
+
+/**
+ * Set image file as permanent.
+ *
+ * @param mixed $form
+ *   form.
+ *
+ * @param mixed $form_state
+ *   form state.
+ *
+ * @return null
+ *   Description.
+ */
+function image_file_permanent($form, &$form_state) {
+  if ($form_state['values']['sf_image_une_file'] != '') {
+    $file_image_une = file_load($form_state['values']['sf_image_une_file']);
+    $file_image_une->status = FILE_STATUS_PERMANENT;
+    file_save($file_image_une);
+    file_usage_add($file_image_une, 'user', 'user', 0);
+  }
+}

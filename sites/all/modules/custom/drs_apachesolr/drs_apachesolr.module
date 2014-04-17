@@ -1,0 +1,45 @@
+<?php
+
+/**
+ * @file drs_apachesolr.module
+ * Add indexed field to solr search
+ */
+
+function drs_apachesolr_apachesolr_index_document_build($document, $node, $namespace) { 
+  if (isset($node->field_image[LANGUAGE_NONE]['0']['uri'])) 
+    $document->addField('ss_field_image_uri', $node->field_image[LANGUAGE_NONE]['0']['value']);
+  
+  if (isset($node->	field_tags[LANGUAGE_NONE]['0']['tid']))  {
+      foreach ($node->field_tags[LANGUAGE_NONE] as $tag) { 
+       $document->addField('sm_field_tags', $tag['tid']);
+    }
+  }
+    
+    
+  
+
+  
+}
+
+function drs_apachesolr_apachesolr_query_alter($query) {
+  $query->addParam('fl', 'ss_field_image_uri');
+  $query->addParam('fl', 'sm_field_tags');
+
+}
+/**
+ * Prepare the query by adding parameters, sorts, etc.
+ *
+ * This hook is invoked before the query is cached. The cached query is used
+ * after the search such as for building facet and sort blocks, so parameters
+ * added during this hook may be visible to end users.
+ *
+ * This is otherwise the same as HOOK_apachesolr_query_alter(), but runs before
+ * it.
+ *
+ * @param object $query
+ *  An object implementing DrupalSolrQueryInterface. No need for &.
+ */
+function drs_apachesolr_apachesolr_query_prepare(DrupalSolrQueryInterface $query) {
+  $query->addParam('fl', 'ss_field_image_uri');
+  $query->addParam('fl', 'sm_field_tags');
+}

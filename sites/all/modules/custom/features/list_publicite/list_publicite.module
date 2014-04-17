@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the list publicite feature.
+ */
+
+include_once 'list_publicite.features.inc';

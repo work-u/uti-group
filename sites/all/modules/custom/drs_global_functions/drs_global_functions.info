@@ -1,0 +1,5 @@
+; File drs_global_functions/drs_global_functions.info
+name = Global functions
+description = Global functions that is called from  the site files
+core = 7.x
+package = DRS

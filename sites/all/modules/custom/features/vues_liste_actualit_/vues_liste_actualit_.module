@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Vues Liste Actualité feature.
+ */
+
+include_once 'vues_liste_actualit_.features.inc';
