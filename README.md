@@ -1,4 +1,4 @@
 uti-group
 =========
 
-Project UTI-Group
+UTI Group

@@ -215,7 +215,7 @@ $databases = array (
   array (
     'default' => 
     array (
-      'database' => 'drupal_utigroupe',
+      'database' => 'drupal_uti_group',
       'username' => 'root',
       'password' => '',
       'host' => 'localhost',
@@ -256,7 +256,7 @@ $update_free_access = FALSE;
  *   $drupal_hash_salt = file_get_contents('/home/example/salt.txt');
  *
  */
-$drupal_hash_salt = 'PWtHjuOn3Hy6DuY6Ck7G078xJvk6jg67yfD4goknXoY';
+$drupal_hash_salt = 'sjylo_KjBR0VIv0gAGh6dhYSM3swmGWCFViNID69oMc';
 
 /**
  * Base URL (optional).

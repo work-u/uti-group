@@ -1,0 +1,54 @@
+
+name = UTI-GROUP
+description = Site UTI-GROUP.
+package = UTI-GROUP
+version = VERSION
+core = 7.x
+
+stylesheets[all][] = assets/css/reset.css
+
+stylesheets[all][] = assets/css/custom.css
+
+
+scripts[] = assets/js/plugins/modernizr.custom.js
+
+scripts[] = assets/js/jQuery/jquery.min.js
+scripts[] = assets/js/script.js
+scripts[] = assets/js/custom.js
+
+
+regions[header]                    = Header
+regions[navigation]                = Navigation
+regions[highlighted]               = Highlighted
+regions[help]                      = Help
+regions[main_menu]                 = Main menu
+regions[top_content]               = Top Content (Presentation and Organisation)
+regions[content]                   = Content
+regions[footer_content]            = Footer Content
+regions[sidebar_first]             = First Sidebar
+regions[sidebar_second]            = Second Sidebar
+regions[sidebar_third]             = Third Sidebar
+regions[footer]                    = Footer
+regions[content_buttom]            = Content Buttom
+regions[content_buttom_faq]        = Content Buttom FAQ
+regions[service_media_grid]        = Page Service Media Grid
+regions[service_media_list_fonds]  = Page Service Media List Fond
+regions[service_media_rside]       = Page Service Media Right Side
+regions[etudes_events_highlighted] = Etudes Events Highlighted
+regions[etudes_events_right]       = Etudes Events right region
+regions[etudes_events_left_top]    = Etudes Events left top
+regions[etudes_events_left_footer] = Etudes Events left footer
+
+regions[triptych_first]             = First Triptych
+regions[triptych_second]            = Second Triptych
+regions[triptych_third]             = Third Triptych
+
+
+regions[bottom_presentation]        = Bottom Presentation
+
+settings[shortcut_module_link] = 0
+
+version = "7.26"
+project = "drupal"
+datestamp = "1365027012"
+

@@ -1,0 +1,31 @@
+.menu-principale ul {list-style:none;}
+.menu-principale ul  li{
+float: left;
+padding: 10px 0px 0 0px;
+width: 102px;
+height: 50px;
+display: table;
+margin-left: 2px;
+}
+.menu-principale ul  li a{
+	display:table-cell;
+	vertical-align: middle;
+	text-decoration:none;
+	height:40px;
+	color:#003366;
+	font-size:10.5px;
+	text-align: center;
+	text-transform:uppercase;
+	border-bottom:solid 10px;
+	-webkit-border-bottom-right-radius: 9px;
+	-moz-border-radius-bottomright: 9px;
+	border-bottom-right-radius: 9px;
+}
+
+
+.menu-principale ul  li.blue a{border-color:#003366;}
+.menu-principale ul  li.blue-ciel a{border-color:#33cccc;}
+.menu-principale ul li.vert a{border-color:#99cc33;}
+.menu-principale ul  li.rose a{border-color:#cc0066;}
+.menu-principale ul  li.mauve a{border-color:#5f2181;}
+.menu-principale ul  li.violet a{border-color:#996699;color:#996699;}
