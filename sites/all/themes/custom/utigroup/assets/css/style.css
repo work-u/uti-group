@@ -21,7 +21,7 @@ footer.footer {
 	background:#000;
 }
 
-.main {position:relative;}
+.main {position:relative;min-height: 325px;background-color: #fff;}
 
 /*HEADER*/
 .header a.logo{display:block;float:left;width:132px;}
@@ -80,3 +80,12 @@ cursor: pointer;
 .jssorb17 div:hover, .jssorb17 .av:hover { background-position: -37px -7px; }
 .jssorb17 .av { background-position: -67px -7px; }
 .jssorb17 .dn, .jssorb17 .dn:hover { background-position: -97px -7px; }
+
+/*PAGE*/
+.main .main-content{width:664px;padding:20px 60px;}
+.main .main-content .titre{padding:0 50px;margin:0;height:70px;line-height:70px;color:#fff;font-size:23px;}
+
+/*Color-Page*/
+.blue-theme.body .main .main-content .titre {background-color:#003366;}
+
+
