@@ -1,3 +1,4 @@
+/*GENERLE*/
 body {
 	background: #004481 url(../img/background-body.jpg) top center repeat-x;
 	font-size:12px;
@@ -15,10 +16,6 @@ header.header {
 	height:60px;
 }
 
-.header a.logo{display:block;float:left;width:132px;}
-.header .menu-principale{display:block;float:left;}
-
-
 footer.footer {
 	height:48px;
 	background:#000;
@@ -26,44 +23,60 @@ footer.footer {
 
 .main {position:relative;}
 
-.main .slideshow {height:345px;background-color:#fff;
-position: relative;
-z-index: 1;}
-.main .fil-actu {height:20px;line-height:20px; background:transparent url(../img/background-fil-actu.png) center center no-repeat;padding:9px 20px;margin-top: -38px;
-position: relative;
-z-index: 2;}
-.main .nos-client {position:absolute;z-index:99;top: 190px;
-left: -115px;width:160px;height:100px;border:solid 5px #33cccc;background:#fff;}
-.main .dernieres-offres {position:absolute;z-index:99;top: 38px;
-right: -120px;width:160px;min-height:50px;border:solid 5px #cc0066;background:#fff;}
+/*HEADER*/
+.header a.logo{display:block;float:left;width:132px;}
+.header .menu-principale{display:block;float:left;}
 
-.main .dernieres-offres h2.titre{padding: 5px 15px;
-text-transform: uppercase;
-text-align: center;
-width: 118px;
-color:#1a171b;
-font-size:11px;
-height: 27px;
-margin: -8px 0 0 5px;background:transparent url(../img/back-title-offre-emploi.png) center center no-repeat;}
-
+/*MAIN HOME*/
+.main .slideshow {height:345px;background-color:#fff;position: relative;z-index: 1;}
+.main .fil-actu {height:20px;line-height:20px; background:transparent url(../img/background-fil-actu.png) center center no-repeat;padding:9px 20px;margin-top: -38px;position: relative;z-index: 2;}
+.main .nos-client {position:absolute;z-index:99;top: 190px;left: -115px;width:160px;height:100px;border:solid 5px #33cccc;background:#fff;}
+.main .dernieres-offres {position:absolute;z-index:99;top: 38px;right: -120px;width:160px;min-height:50px;border:solid 5px #cc0066;background:#fff;}
+.main .dernieres-offres h2.titre{padding: 5px 15px;text-transform: uppercase;text-align: center;width: 118px;color:#1a171b;font-size:11px;height: 27px;margin: -8px 0 0 5px;background:transparent url(../img/back-title-offre-emploi.png) center center no-repeat;}
 .main .dernieres-offres  ul{list-style:none;padding:10px 0;}
 .main .dernieres-offres  ul li {padding:2px 10px;}
 .main .dernieres-offres  ul li a{color:#000;font-size:11px;text-decoration:none;}
 .main .dernieres-offres  ul li a:hover{color:#cc0066;font-size:11px;text-decoration:none;}
-
 .main .information {height:142px;background-color:#c2dee9;overflow:hidden;padding:0px 17px;}
-
 .main .information .block{width:242px;height:125px;float:left;position:relative;margin:9px 4px;display:block;text-decoration:none;}
-.main .information .block .fleche{width:43px;height:25px;position:absolute;top: -5px;
-left: 100px;background:transparent url(../img/fleche-gris.png) center center no-repeat;}
+.main .information .block .fleche{width:43px;height:25px;position:absolute;top: -5px;left: 100px;background:transparent url(../img/fleche-gris.png) center center no-repeat;}
 .main .information .block p.texte{padding:80px 15px 0 15px;font-size:12px;color:#fff;text-align:center;}
 .main .information .groupe{background:transparent url(../img/back-groupe.png) center center no-repeat;}
 .main .information .temoignages{background:transparent url(../img/back-temoignages.png) center center no-repeat;}
 .main .information .rejoigneznous{background:transparent url(../img/back-rejoigneznous.png) center center no-repeat;}
 
-
-
-
-
-
-
+/*FOOTER*/
+footer.footer > .footer-wrapper{overflow:hidden;margin:0 20px;}
+footer.footer > .footer-wrapper > .reseaux-sociaux{float:left;}
+footer.footer > .footer-wrapper > .reseaux-sociaux ul {list-style:none;}
+footer.footer > .footer-wrapper > .reseaux-sociaux ul li{margin:12px 2px;float:left;width:23px;height:23px;background: url(../img/icone-reseaux-sociaux.png) 0 0 no-repeat;}
+footer.footer > .footer-wrapper > .reseaux-sociaux ul li.facebook{background-position:0 0;}
+footer.footer > .footer-wrapper > .reseaux-sociaux ul li.viadeo{background-position:-27px 0;}
+footer.footer > .footer-wrapper > .reseaux-sociaux ul li.twitter{background-position:-54px 0;}
+footer.footer > .footer-wrapper > .reseaux-sociaux ul li.linkedin{background-position:-81px 0;}
+footer.footer > .footer-wrapper > .reseaux-sociaux ul li a{text-decoration:none;line-height:48px;display:block;width:23px;height:23px;}
+footer.footer > .footer-wrapper > .menu-footer{float:right;}
+footer.footer > .footer-wrapper > .menu-footer ul {list-style:none;}
+footer.footer > .footer-wrapper > .menu-footer ul li{float:left;padding:0 10px;}
+footer.footer > .footer-wrapper > .menu-footer ul li a{text-decoration:none;font-size:10px;line-height:48px;;display:block;text-transform:uppercase;color:#818181;}
+footer.footer > .footer-wrapper > .menu-footer ul li a:hover{color:#cc0066;}
+footer.footer > .footer-wrapper > .logo-footer{float:right;padding:7px;padding-right:0;}
+/*SLIDER*/
+/* jssor slider bullet navigator skin 17 css */
+/*
+.jssorb17 div           (normal)
+.jssorb17 div:hover     (normal mouseover)
+.jssorb17 .av           (active)
+.jssorb17 .av:hover     (active mouseover)
+.jssorb17 .dn           (mousedown)
+*/
+.jssorb17 div, .jssorb17 div:hover, .jssorb17 .av
+{
+background: url(../img/n17.png) no-repeat;
+overflow:hidden;
+cursor: pointer;
+}
+.jssorb17 div { background-position: -7px -7px; }
+.jssorb17 div:hover, .jssorb17 .av:hover { background-position: -37px -7px; }
+.jssorb17 .av { background-position: -67px -7px; }
+.jssorb17 .dn, .jssorb17 .dn:hover { background-position: -97px -7px; }

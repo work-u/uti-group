@@ -47,16 +47,24 @@
 			<div class="main-wrapper">
 				<section class="slideshow">
 					<div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 784px; height: 346px;">
-                        <!-- Slides Container -->
-    <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 784px; height: 346px;">
-        <div><img u="image" src="../img/slideshow/slide1.jpg" /></div>
-        <div><img u="image" src="../img/slideshow/slide2.jpg" /></div>
-		<div><img u="image" src="../img/slideshow/slide3.jpg" /></div>
-        <div><img u="image" src="../img/slideshow/slide4.jpg" /></div>
-    </div>		
+						<!-- Slides Container -->
+						<div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 784px; height: 346px;">
+							<div><img u="image" src="../img/slideshow/slide1.jpg" /></div>
+							<div><img u="image" src="../img/slideshow/slide2.jpg" /></div>
+							<div><img u="image" src="../img/slideshow/slide3.jpg" /></div>
+							<div><img u="image" src="../img/slideshow/slide4.jpg" /></div>
+						</div>
+										
+						<!-- bullet navigator container -->
+						<div u="navigator" class="jssorb17" style="position: absolute; bottom: 50px; right: 6px;">
+							<!-- bullet navigator item prototype -->
+							<div u="prototype" style="POSITION: absolute; WIDTH: 16px; HEIGHT: 16px;"></div>
+						</div>
+						<!-- Bullet Navigator Skin End -->
+					</div>
 				</section>
-				<section class="fil-actu">texte texte texte texte texte</section>
-				<section class="nos-client"><a href="#"><img src="../img/logo-mutuelle.jpg" /><a/></section>
+				<section class="fil-actu"><marquee direction="left">Mon texte va vers la gauche</marquee></section>
+				<section class="nos-client"><a href="#"><img src="../img/logo-mutuelle.jpg" /></a></section>
 				<section class="dernieres-offres">
 					<h2 class="titre">Nos dernières offres d'emploi</h2>
 					<ul>
@@ -81,12 +89,30 @@
 		<!--footer -->
 		<footer class="footer">
 			<div class="footer-wrapper">
-
+				<div class="reseaux-sociaux">
+					<ul>
+						<li class="facebook"><a href="#"></a></li>
+						<li class="viadeo"><a href="#"></a></li>
+						<li class="twitter"><a href="#"></a></li>
+						<li class="linkedin"><a href="#"></a></li>
+					</ul>
+				</div>
+				
+				<div class="logo-footer"><a href="#"><img src="../img/media/afaq.png"/></a></div>
+				<div class="menu-footer">
+					<ul>
+						<li><a href="#">Lien1</a></li>
+						<li><a href="#">Lien1</a></li>
+						<li><a href="#">Lien1</a></li>
+					</ul>
+				</div>
 			</div>
 		</footer>
 	</div>
 <script type="text/javascript" src="../js/jQuery/jquery.min.js"></script>
-<script src="../js/plugins/jssor.slider.mini.js"></script>
+<script type="text/javascript" src="../js/plugins/jssor/jssor.core.js"></script>
+<script type="text/javascript" src="../js/plugins/jssor/jssor.utils.js"></script>
+<script type="text/javascript" src="../js/plugins/jssor/jssor.slider.js"></script>
 <script type="text/javascript" src="../js/script.js"></script>
 </body>
 </html>
