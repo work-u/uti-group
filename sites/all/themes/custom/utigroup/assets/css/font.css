@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'androgyneregular';
+    src: url('font/androgyne_tb.eot');
+    src: url('font/androgyne_tb.eot?#iefix') format('embedded-opentype'),
+         url('font/androgyne_tb.woff') format('woff'),
+         url('font/androgyne_tb.ttf') format('truetype'),
+         url('font/androgyne_tb.svg#androgyneregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
