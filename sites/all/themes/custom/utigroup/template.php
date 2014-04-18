@@ -1,4 +1,16 @@
 <?php
+ /**
+ * Implementation of hook_preprocess_html()
+ * @param array $vars
+ */
+function utigroup_preprocess_html(&$vars) {
+    drupal_add_js(base_path() . path_to_theme() . '/assets/js/plugins/modernizr.custom.js', array('type' => 'file', 'scope' => 'header'));
+    drupal_add_js(base_path() . path_to_theme() . '/assets/js/plugins/respond.js', array('type' => 'file', 'scope' => 'header'));
+    drupal_add_js(base_path() . path_to_theme() . '/assets/js/jQuery/jquery.min.js', array('type' => 'file', 'scope' => 'footer'));
+    drupal_add_js(base_path() . path_to_theme() . '/assets/js/plugins/jssor.slider.mini.js', array('type' => 'file', 'scope' => 'footer'));
+    drupal_add_js(base_path() . path_to_theme() . '/assets/js/script.js', array('type' => 'file', 'scope' => 'footer'));
+    drupal_add_js(base_path() . path_to_theme() . '/assets/js/custom.js', array('type' => 'file', 'scope' => 'footer'));
+}
 
 /**
  * @file template.php
@@ -13,18 +25,6 @@ function utigroup_preprocess_page(&$vars, $hook) {
  $vars['menu_supeieur'] = utigroup_menuSupeieur();
  $vars['menu_footer'] = utigroup_get_this_menu('menu-menu-footer');
  $vars['menu_footer_social'] = utigroup_get_this_menu('menu-menu-footer-social');
-}
- /**
- * Implementation of hook_preprocess_html()
- * @param array $vars
- */
-function utigroup_preprocess_html(&$vars) {
-    drupal_add_js(base_path() . path_to_theme() . '/assets/js/plugins/modernizr.custom.js', array('type' => 'file', 'scope' => 'header'));
-    drupal_add_js(base_path() . path_to_theme() . '/assets/js/plugins/respond.js', array('type' => 'file', 'scope' => 'header'));
-    drupal_add_js(base_path() . path_to_theme() . '/assets/js/jQuery/jquery.min.js', array('type' => 'file', 'scope' => 'footer'));
-    drupal_add_js(base_path() . path_to_theme() . '/assets/js/plugins/jssor.slider.mini.js', array('type' => 'file', 'scope' => 'footer'));
-    drupal_add_js(base_path() . path_to_theme() . '/assets/js/script.js', array('type' => 'file', 'scope' => 'footer'));
-    drupal_add_js(base_path() . path_to_theme() . '/assets/js/custom.js', array('type' => 'file', 'scope' => 'footer'));
 }
 
 /*

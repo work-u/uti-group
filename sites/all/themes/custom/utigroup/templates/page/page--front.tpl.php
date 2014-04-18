@@ -65,7 +65,7 @@
                     </ul>
                 </div>
                 
-                <div class="logo-footer"><a href="#"><img src="<?php echo base_path().drupal_get_path('theme', 'utigroup'); ?>/assets/img/media/afaq.png"/></a></div>
+                <div class="logo-footer"><a href="<?php echo variable_get('uti_group_afaq_url', ''); ?>"><img src="<?php echo base_path().drupal_get_path('theme', 'utigroup'); ?>/assets/img/media/afaq.png"/></a></div>
                 <div class="menu-footer">
                     <ul>
                         <?php print render($menu_footer); ?>
