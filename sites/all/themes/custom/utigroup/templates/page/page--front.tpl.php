@@ -8,7 +8,7 @@
 <header class="header">
     <div class="header-wrapper">
         <a class="logo" href="<?php print base_path(); ?>">
-            <img src="<?php echo base_path().drupal_get_path('theme', 'utigroup'); ?>/assets/img/media/logo.gif" height="60px"/>
+            <img src="<?php echo base_path().drupal_get_path('theme', 'utigroup'); ?>/assets/img/media/logo.png" height="60px"/>
         </a>
         
         <div class="menu-principale">
