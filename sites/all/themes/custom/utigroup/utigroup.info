@@ -1,23 +1,19 @@
 
 name = UTI-GROUP
 description = Site UTI-GROUP.
-package = UTI-GROUP
+package = UTIGROUP
 version = VERSION
 core = 7.x
 
 stylesheets[all][] = assets/css/reset.css
+stylesheets[all][] = assets/css/global.css
+stylesheets[all][] = assets/css/menu.css
+stylesheets[all][] = assets/css/style.css
 
 stylesheets[all][] = assets/css/custom.css
 
 
-scripts[] = assets/js/plugins/modernizr.custom.js
-
-scripts[] = assets/js/jQuery/jquery.min.js
-scripts[] = assets/js/script.js
-scripts[] = assets/js/custom.js
-
-
-regions[header]                    = Header
+regions[slide_home]                    = slide home
 regions[navigation]                = Navigation
 regions[highlighted]               = Highlighted
 regions[help]                      = Help
