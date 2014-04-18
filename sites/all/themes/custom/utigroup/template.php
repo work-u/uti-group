@@ -10,7 +10,9 @@
  * @param array $hook
  */
 function utigroup_preprocess_page(&$vars, $hook) {
- $vars['menu_supeieur'] = utigroup_menuSupeieur();	 
+ $vars['menu_supeieur'] = utigroup_menuSupeieur();
+ $vars['menu_footer'] = utigroup_get_this_menu('menu-menu-footer');
+ $vars['menu_footer_social'] = utigroup_get_this_menu('menu-menu-footer-social');
 }
  /**
  * Implementation of hook_preprocess_html()
@@ -42,28 +44,8 @@ function utigroup_menuSupeieur() {
     $content = '';
     $key = 0;
     foreach ($menus as $menu):
-		$class=""; 
-        if ($key == 0) {
-         $class="blue";  
-		}
-		if ($key == 1) {
-         $class="blue-ciel";  
-		}  
-		if ($key == 2) {
-         $class="vert";  
-		}
-		if ($key == 3) {
-         $class="rose";  
-		}
-		if ($key == 4) {
-         $class="mauve";  
-		}
-		if ($key == 5) {
-         $class="violet";  
-		}
-			
 		if ($menu['link']['depth'] == 1) {                
-                $content .= '<li class="'.$class.'"><a href="'.url($menu['link']['href']).'">'.$menu['link']['link_title'] . '</a></li>'; //1 niveau                
+                $content .= '<li class=" '.join(' ', $menu['link']['options']['attributes']['class']).'"><a href="'.url($menu['link']['href']).'">'.$menu['link']['link_title'] . '</a></li>'; //1 niveau                
                 // if (!empty($menu['below'])) {
                     // $content .= '<ul>'; //2 niveau
                     // foreach ($menu['below'] as $menub):
@@ -80,6 +62,29 @@ function utigroup_menuSupeieur() {
             continue;
         
     
+    endforeach;
+
+    return $content;
+}
+
+function utigroup_get_this_menu($this_menu) {
+
+    $menu_supp = $this_menu;
+
+    $active_path = menu_tree_get_path($menu_supp);
+    $router_item = menu_get_item($active_path);
+    $active_link = menu_link_get_preferred($active_path, $menu_supp);
+    
+    $menus = menu_tree_all_data($menu_supp);    
+    $content = '';
+    $key = 0;
+    foreach ($menus as $menu):
+        $class=""; 
+        if ($menu['link']['depth'] == 1) {                
+                $content .= '<li class="'.join(' ', $menu['link']['options']['attributes']['class']).'"><a href="'.url($menu['link']['href']).'">'.$menu['link']['link_title'] . '</a></li>';
+             }
+            $key++;
+            continue;
     endforeach;
 
     return $content;

@@ -14,7 +14,7 @@
         <div class="menu-principale">
             <nav>
                 <ul>
-                    <?php print render($menu_supeieur); ?>                    
+                    <?php print render($menu_supeieur); ?>
                 </ul>
             </nav>
         </div>
@@ -26,11 +26,11 @@
     <div class="main-wrapper">
             <section class="slideshow">
                 <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 784px; height: 346px;">
-                    <!-- Slides Container -->                    
+                    <!-- Slides Container -->
                         <?php print render($page['slide_home']); ?> 
                 </div>    
             </section>
-            <section class="fil-actu">texte texte texte texte texte</section>            
+            <section class="fil-actu">texte texte texte texte texte</section>
             <section class="nos-client">
                 <a href="#">
                     <img src="<?php echo base_path().drupal_get_path('theme', 'utigroup'); ?>/assets/img/logo-mutuelle.jpg" />
@@ -59,6 +59,18 @@
     <!--footer -->
     <footer class="footer">
         <div class="footer-wrapper">
+            <div class="reseaux-sociaux">
+                    <ul>
+                    	<?php print render($menu_footer_social); ?>
+                    </ul>
+                </div>
+                
+                <div class="logo-footer"><a href="#"><img src="<?php echo base_path().drupal_get_path('theme', 'utigroup'); ?>/assets/img/media/afaq.png"/></a></div>
+                <div class="menu-footer">
+                    <ul>
+                        <?php print render($menu_footer); ?>
+                    </ul>
+                </div>
         </div>
     </footer>
 </div>
