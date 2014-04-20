@@ -4,7 +4,7 @@ jQuery(document).ready(function ($) {
 					maxWidth	: 800,
 					maxHeight	: 600,
 					fitToView	: false,
-					width		: '70%',
+					width		: 664,
 					height		: '70%',
 					autoSize	: false,
 					closeClick	: false,
