@@ -1,8 +1,21 @@
 jQuery(document).ready(function ($) {
-	var options = {
+	if($.fn.fancybox)
+	$(".fancybox").fancybox({
+				maxWidth	: 800,
+				maxHeight	: 600,
+				fitToView	: false,
+				width		: '70%',
+				height		: '70%',
+				autoSize	: false,
+				closeClick	: false,
+				openEffect	: 'none',
+				closeEffect	: 'none'
+			});
+
+
+	var options_jssorSlider = {
 		$AutoPlay: true,
 		$DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
-
 	   $BulletNavigatorOptions: {                                //[Optional] Options to specify and enable navigator or not
 			$Class: $JssorBulletNavigator$,                       //[Required] Class to create navigator instance
 			$ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
@@ -14,5 +27,9 @@ jQuery(document).ready(function ($) {
 			$Orientation: 1                                 //[Optional] The orientation of the navigator, 1 horizontal, 2 vertical, default value is 1
 		}
 	};
-	var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+	
+	var jssor_slider1 = new $JssorSlider$("slider1_container", options_jssorSlider);
+	
+
+
 });

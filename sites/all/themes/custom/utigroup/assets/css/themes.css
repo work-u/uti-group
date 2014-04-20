@@ -1,0 +1,125 @@
+/*******************************************************************************
+-------------------------COLOR-PAGE---------------------------------------------
+*******************************************************************************/
+/*
+ * blue
+ */
+.blue-theme.body .main .main-content h1.titre,
+.blue-theme.body .main .main-content .h1.titre,
+.blue-theme.body .main .main-content .block-1 .titre,
+.blue-theme.body .block-2 .content,
+.blue-theme.body .block-3 .titre {
+	background-color:#003366;
+}
+.blue-theme.body .main .main-content .block-1 .content,
+.blue-theme.body .main .main-content .block-2,
+.blue-theme.body .main .main-content .block-3{
+	border-color:#003366;
+}
+.blue-theme.body .block-3 .get-all:hover{
+	background: url(../img/themes/blue/hover-80-percent.png);
+}
+/* ** end theme blue */
+
+/*
+ * blue-ciel
+ */
+.blue-ciel-theme.body .main .main-content h1.titre,
+.blue-ciel-theme.body .main .main-content .h1.titre,
+.blue-ciel-theme.body .main .main-content .block-1 .titre,
+.blue-ciel-theme.body .block-2 .content,
+.blue-ciel-theme.body .block-3 .titre {
+	background-color:#33cccc;
+}
+.blue-ciel-theme.body .main .main-content .block-1 .content,
+.blue-ciel-theme.body .main .main-content .block-2,
+.blue-ciel-theme.body .main .main-content .block-3{
+	border-color:#33cccc;
+}
+.blue-ciel-theme.body .block-3 .get-all:hover{
+	background: url(../img/themes/blue-ciel/hover-80-percent.png);
+}
+/* ** end theme blue-ciel */
+
+/*
+ * vert
+ */
+.vert-theme.body .main .main-content h1.titre,
+.vert-theme.body .main .main-content .h1.titre,
+.vert-theme.body .main .main-content .block-1 .titre,
+.vert-theme.body .block-2 .content,
+.vert-theme.body .block-3 .titre {
+	background-color:#9C3;
+}
+.vert-theme.body .main .main-content .block-1 .content,
+.vert-theme.body .main .main-content .block-2,
+.vert-theme.body .main .main-content .block-3{
+	border-color:#9C3;
+}
+.vert-theme.body .block-3 .get-all:hover{
+	background: url(../img/themes/vert/hover-80-percent.png);
+}
+/* ** end theme vert */
+
+
+/*
+ * rose
+ */
+.rose-theme.body .main .main-content h1.titre,
+.rose-theme.body .main .main-content .h1.titre,
+.rose-theme.body .main .main-content .block-1 .titre,
+.rose-theme.body .block-2 .content,
+.rose-theme.body .block-3 .titre {
+	background-color:#C06;
+}
+.rose-theme.body .main .main-content .block-1 .content,
+.rose-theme.body .main .main-content .block-2,
+.rose-theme.body .main .main-content .block-3{
+	border-color:#C06;
+}
+.rose-theme.body .block-3 .get-all:hover{
+	background: url(../img/themes/rose/hover-80-percent.png);
+}
+/* ** end theme rose */
+
+/*
+ * mauve
+ */
+.mauve-theme.body .main .main-content h1.titre,
+.mauve-theme.body .main .main-content .h1.titre,
+.mauve-theme.body .main .main-content .block-1 .titre,
+.mauve-theme.body .block-2 .content,
+.mauve-theme.body .block-3 .titre {
+	background-color:#5F2181;
+}
+.mauve-theme.body .main .main-content .block-1 .content,
+.mauve-theme.body .main .main-content .block-2,
+.rose-theme.body .main .main-content .block-3{
+	border-color:#5F2181;
+}
+.mauve-theme.body .block-3 .get-all:hover{
+	background: url(../img/themes/mauve/hover-80-percent.png);
+}
+/* ** end theme mauve */
+
+
+/*
+ * violet
+ */
+.violet-theme.body .main .main-content h1.titre,
+.violet-theme.body .main .main-content .h1.titre,
+.violet-theme.body .main .main-content .block-1 .titre,
+.violet-theme.body .block-2 .content,
+.violet-theme.body .block-3 .titre {
+	background-color:#969;
+}
+.violet-theme.body .main .main-content .block-1 .content,
+.violet-theme.body .main .main-content .block-2,
+.rose-theme.body .main .main-content .block-3{
+	border-color:#969;
+}
+.violet-theme.body .block-3 .get-all:hover{
+	background: url(../img/themes/violet/hover-80-percent.png);
+}
+/* ** end theme violet */
+ 
