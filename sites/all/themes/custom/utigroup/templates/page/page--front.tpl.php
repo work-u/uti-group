@@ -39,9 +39,8 @@
             </section>
            <section class="fil-actu"><marquee direction="left">Mon texte va vers la gauche</marquee></section>
             <section class="nos-client">
-                <a href="#">
+                <h2 class="titre">Nos clients</h2>
                     <img src="<?php echo base_path().drupal_get_path('theme', 'utigroup'); ?>/assets/img/logo-mutuelle.jpg" />
-                <a/>
             </section>
             <section class="dernieres-offres">
                 <h2 class="titre">Nos dernières offres d'emploi</h2>
