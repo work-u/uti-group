@@ -1,0 +1,11 @@
+.fil-actu a,
+.fil-actu a:link{
+	text-decoration: none;
+	color: #939598;
+}
+.fil-actu a:hover{
+	text-decoration: underline;
+}
+.fil-actu span.titre{
+	color: #003366;
+}
