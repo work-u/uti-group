@@ -39,5 +39,6 @@
 
 .left{float:left;}
 .right{float:right;}
-
+.display-none{display:none;}
+.mr-3{margin-right:3px;}
 b,strong{font-weight:bold;}
