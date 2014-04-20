@@ -31,20 +31,19 @@
                         <?php print render($page['slide_home']); ?> 
                         <!-- bullet navigator container -->
                         <div u="navigator" class="jssorb17" style="position: absolute; bottom: 50px; right: 6px;">
-                                <!-- bullet navigator item prototype -->
-                                <div u="prototype" style="POSITION: absolute; WIDTH: 16px; HEIGHT: 16px;"></div>
+                            <!-- bullet navigator item prototype -->
+                            <div u="prototype" style="POSITION: absolute; WIDTH: 16px; HEIGHT: 16px;"></div>
                         </div>
                         <!-- Bullet Navigator Skin End -->
                 </div>    
             </section>
-           <section class="fil-actu"><marquee direction="left">Mon texte va vers la gauche</marquee></section>
+           <section class="fil-actu"><marquee direction="left"><a href="#"><span class="titre">ACTUS ></span>  Lancement du G.R.H. sur l'intranet   ///   UTIGroup sponsorise "Les entretiens de l'excellence"</a></marquee></section>
             <section class="nos-client">
-                <a href="#">
+                <h2 class="titre"><?php echo t("Nos clients"); ?></h2>
                     <img src="<?php echo base_path().drupal_get_path('theme', 'utigroup'); ?>/assets/img/logo-mutuelle.jpg" />
-                <a/>
             </section>
             <section class="dernieres-offres">
-                <h2 class="titre">Nos dernières offres d'emploi</h2>
+                <h2 class="titre"><?php echo t("Nos dernières offres d'emploi"); ?></h2>
                 <ul>
                     <li><a href="#">> Analyste Programmeur<br>Grand Système Assurance</a></li>
                     <li><a href="#">> Analyste Développeur <br>Oracle</a></li>
@@ -71,5 +70,4 @@
                 </div>
         </div>
     </footer>
-    
 <!--/page-->

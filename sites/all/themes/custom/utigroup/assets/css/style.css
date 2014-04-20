@@ -35,6 +35,7 @@ footer.footer {
 /*MAIN HOME*/
 .main .slideshow {height:345px;background-color:#fff;position: relative;z-index: 1;}
 .main .fil-actu {height:20px;line-height:20px; background:transparent url(../img/background-fil-actu.png) center center no-repeat;padding:9px 20px;margin-top: -38px;position: relative;z-index: 2;}
+.main .nos-client h2.titre{padding: 5px 15px;text-transform: uppercase;text-align: center;width: 118px;color:#1a171b;font-size:11px;height: 17px;margin: -8px 0 0 5px;background:transparent url(../img/back-title-nos-clien.png) center center no-repeat;position: absolute;top:0;}
 .main .nos-client {position:absolute;z-index:99;top: 190px;left: -120px;width:160px;height:100px;border:solid 5px #33cccc;background:#fff;}
 .main .dernieres-offres {position:absolute;z-index:99;top: 68px;right: -120px;width:160px;min-height:50px;border:solid 5px #cc0066;background:#fff;}
 
