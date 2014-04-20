@@ -8,9 +8,15 @@
 .blue-theme.body .main .main-content .h1.titre,
 .blue-theme.body .main .main-content .block-1 .titre,
 .blue-theme.body .block-2 .content,
-.blue-theme.body .block-3 .titre {
+.blue-theme.body .block-3 .titre,
+.blue-theme.body .fancybox-titre {
 	background-color:#003366;
 }
+
+.blue-theme.body  .fancybox-content .color{
+	color:#003366;
+}
+
 .blue-theme.body .main .main-content .block-1 .content,
 .blue-theme.body .main .main-content .block-2,
 .blue-theme.body .main .main-content .block-3{
@@ -18,6 +24,10 @@
 }
 .blue-theme.body .block-3 .get-all:hover{
 	background: url(../img/themes/blue/hover-80-percent.png);
+}
+
+.blue-theme.body .fancybox-close{
+	background: url(../img/themes/blue/fancybox-close.png)center center no-repeat;	
 }
 /* ** end theme blue */
 
@@ -28,9 +38,15 @@
 .blue-ciel-theme.body .main .main-content .h1.titre,
 .blue-ciel-theme.body .main .main-content .block-1 .titre,
 .blue-ciel-theme.body .block-2 .content,
-.blue-ciel-theme.body .block-3 .titre {
+.blue-ciel-theme.body .block-3 .titre,
+.blue-ciel-theme.body .fancybox-titre {
 	background-color:#33cccc;
 }
+
+.blue-ciel-theme.body  .fancybox-content .color{
+	color:#33cccc;
+}
+
 .blue-ciel-theme.body .main .main-content .block-1 .content,
 .blue-ciel-theme.body .main .main-content .block-2,
 .blue-ciel-theme.body .main .main-content .block-3{
@@ -39,6 +55,12 @@
 .blue-ciel-theme.body .block-3 .get-all:hover{
 	background: url(../img/themes/blue-ciel/hover-80-percent.png);
 }
+
+.blue-ciel-theme.body .fancybox-close{
+	background: url(../img/themes/blue-ciel/fancybox-close.png)center center no-repeat;	
+}
+
+
 /* ** end theme blue-ciel */
 
 /*
@@ -48,9 +70,15 @@
 .vert-theme.body .main .main-content .h1.titre,
 .vert-theme.body .main .main-content .block-1 .titre,
 .vert-theme.body .block-2 .content,
-.vert-theme.body .block-3 .titre {
+.vert-theme.body .block-3 .titre,
+.vert-theme.body .fancybox-titre {
 	background-color:#9C3;
 }
+
+.vert-theme.body  .fancybox-content .color{
+	color:#9C3;
+}
+
 .vert-theme.body .main .main-content .block-1 .content,
 .vert-theme.body .main .main-content .block-2,
 .vert-theme.body .main .main-content .block-3{
@@ -59,6 +87,11 @@
 .vert-theme.body .block-3 .get-all:hover{
 	background: url(../img/themes/vert/hover-80-percent.png);
 }
+
+.vert-theme.body .fancybox-close{
+	background: url(../img/themes/vert/fancybox-close.png)center center no-repeat;	
+}
+
 /* ** end theme vert */
 
 
@@ -69,9 +102,15 @@
 .rose-theme.body .main .main-content .h1.titre,
 .rose-theme.body .main .main-content .block-1 .titre,
 .rose-theme.body .block-2 .content,
-.rose-theme.body .block-3 .titre {
+.rose-theme.body .block-3 .titre,
+.rose-theme.body .fancybox-titre {
 	background-color:#C06;
 }
+
+.rose-theme.body  .fancybox-content .color{
+	color:#C06;
+}
+
 .rose-theme.body .main .main-content .block-1 .content,
 .rose-theme.body .main .main-content .block-2,
 .rose-theme.body .main .main-content .block-3{
@@ -80,6 +119,11 @@
 .rose-theme.body .block-3 .get-all:hover{
 	background: url(../img/themes/rose/hover-80-percent.png);
 }
+
+.rose-theme.body .fancybox-close{
+	background: url(../img/themes/rose/fancybox-close.png)center center no-repeat;	
+}
+
 /* ** end theme rose */
 
 /*
@@ -89,9 +133,15 @@
 .mauve-theme.body .main .main-content .h1.titre,
 .mauve-theme.body .main .main-content .block-1 .titre,
 .mauve-theme.body .block-2 .content,
-.mauve-theme.body .block-3 .titre {
+.mauve-theme.body .block-3 .titre,
+.mauve-theme.body .fancybox-titre {
 	background-color:#5F2181;
 }
+
+.mauve-theme.body  .fancybox-content .color{
+	color:#5F2181;
+}
+
 .mauve-theme.body .main .main-content .block-1 .content,
 .mauve-theme.body .main .main-content .block-2,
 .rose-theme.body .main .main-content .block-3{
@@ -100,6 +150,11 @@
 .mauve-theme.body .block-3 .get-all:hover{
 	background: url(../img/themes/mauve/hover-80-percent.png);
 }
+
+.mauve-theme.body .fancybox-close{
+	background: url(../img/themes/mauve/fancybox-close.png)center center no-repeat;	
+}
+
 /* ** end theme mauve */
 
 
@@ -110,9 +165,15 @@
 .violet-theme.body .main .main-content .h1.titre,
 .violet-theme.body .main .main-content .block-1 .titre,
 .violet-theme.body .block-2 .content,
-.violet-theme.body .block-3 .titre {
+.violet-theme.body .block-3 .titre,
+.violet-theme.body .fancybox-titre {
 	background-color:#969;
 }
+
+.violet-theme.body  .fancybox-content .color{
+	color:#969;
+}
+
 .violet-theme.body .main .main-content .block-1 .content,
 .violet-theme.body .main .main-content .block-2,
 .rose-theme.body .main .main-content .block-3{
@@ -120,6 +181,9 @@
 }
 .violet-theme.body .block-3 .get-all:hover{
 	background: url(../img/themes/violet/hover-80-percent.png);
+}
+.violet-theme.body .fancybox-close{
+	background: url(../img/themes/violet/fancybox-close.png)center center no-repeat;	
 }
 /* ** end theme violet */
  

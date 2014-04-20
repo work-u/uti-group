@@ -1,11 +1,11 @@
 jQuery(document).ready(function ($) {
 	if($.fn.fancybox)
 		$(".fancybox").fancybox({
-					maxWidth	: 800,
-					maxHeight	: 600,
+					padding		: 0,
+					minWidth	: 664,
 					fitToView	: false,
 					width		: 664,
-					height		: '70%',
+					autoHeight	:true,
 					autoSize	: false,
 					closeClick	: false,
 					openEffect	: 'none',
