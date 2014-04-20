@@ -46,16 +46,19 @@ function utigroup_menuSupeieur() {
     $content = '';
     $key = 0;
     foreach ($menus as $menu):
-		if ($menu['link']['depth'] == 1) {                
+        //echo "<pre>";
+        //print_r($menu['link']);
+		if ($menu['link']['depth'] == 1 && !$menu['link']['hidden'] ) {                
                 $content .= '<li class=" '.join(' ', $menu['link']['options']['attributes']['class']).'"><a href="'.url($menu['link']['href']).'">'.$menu['link']['link_title'] . '</a>'; //1 niveau                
                  if (!empty($menu['below'])) {
                      $content .= '<ul>'; //2 niveau
                      foreach ($menu['below'] as $menub):
-                         $__link = $menub['link']['link_title'];
-                         $link = url($menub['link']['href']);
-                         $options = (array('attributes' => array('class' => array()), 'html' => FALSE, 'external' => TRUE));
-
-                        $content .= '<li>' . l($__link, $link, $options) . '</li>'; //2 niveau
+                        if(!$menub['link']['hidden']){
+                            $__link = $menub['link']['link_title'];
+                            $link = url($menub['link']['href']);
+                            $options = (array('attributes' => array('class' => array()), 'html' => FALSE, 'external' => TRUE));
+                            $content .= '<li>' . l($__link, $link, $options) . '</li>'; //2 niveau
+                        }
                      endforeach;
                     $content .= '</ul>'; //2 niveau
                 }
