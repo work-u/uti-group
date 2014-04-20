@@ -1,6 +1,22 @@
 html body.admin-menu {
 	margin-top: 50px !important;
 }
+.main{
+	padding-top: 30px;
+}
+.menu-principale nav > ul > li > ul{
+	padding-top: 5px;
+}
+.menu-principale > nav > ul > li > ul > li{
+	height: 18px;
+	line-height: 18px;
+}
+.menu-principale > nav > ul > li > ul > li > a{
+	padding: 0 5px;
+}
+.main .dernieres-offres{
+	top:68px;
+}
 .home-slider .item-slid .wrap-content{
 	position: absolute;
 	top: 10px;

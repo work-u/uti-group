@@ -1,4 +1,4 @@
-<div u="slides" class="home-slider" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 784px; height: 346px;">
+<div u="slides" class="home-slider" style="position: absolute; overflow: hidden; left: 0px; top: 0px; width: 784px; height: 346px;">
     <?php        
 	    foreach ($rows as $row):	    
     ?>
