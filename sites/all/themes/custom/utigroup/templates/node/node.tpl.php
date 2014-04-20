@@ -80,109 +80,31 @@
  */
 //print "<pre>" . print_r($node, true) . "</pre>";
 ?>
+<?php
+    // We hide the comments and links now so that we can render them later.
+    hide($content['comments']);
+    hide($content['links']);
 
-<?php if (!$teaser) : ?>
-  <div class="page cf">
+    print render($content);
+?>
+<br><br>
+<h1 class="titre"><span>Actualités</span></h1>
+<article class="block-1">
+    <h2 class="titre">Titre block-1</h2>
+    <div class="content">this is a simple text <br>this is a simple text <br>this is a simple text <br>this is a simple text <br></div>
+</article>
 
-    <main id="a_content" role="main" class="box-full">
+<article class="block-1">
+    <h2 class="titre">Titre block-1</h2>
+    <div class="content"><a href="">this is a text with url </a><br><a href="">this is a text with url </a><br><a href="">this is a text with url </a><br><a href="">this is a text with url </a><br></div>
+</article>
 
-      <div class="max-width">
+<article class="block-1">
+    <h2 class="titre">Titre block-1</h2>
+    <div class="content"><u>this is an underline text</u><br><u>this is an underline text</u><br><u>this is an underline text</u><br><u>this is an underline text</u><br></div>
+</article>
 
-        <div class="block block-default block-article">
-          <div class="block-pad">
-            <div class="block block-white article-tools cf">
-
-              <?php include('.' . base_path() . drupal_get_path('theme', 'drs') . '/templates/includes/tools.php'); ?>
-
-            </div><!--/article-tools-->
-
-            <div class="block block-white article-wrapper">
-
-              <article class="article">
-
-                <header>
-                  <h1> <?php print $title; ?></h1>
-                  <?php if (isset($content['field_subtitre'])): ?>
-                    <h2>  <?php print render($content['field_subtitre']); ?></h2>
-                  <?php endif; ?>
-
-                  <?php if (isset($node->body['und'][0]['summary']) && !empty($node->body['und'][0]['summary'])) : ?>
-                    <div class="article-chapeau">
-                      <p>  <?php
-                        print render(field_view_field('node', $node, 'body', array(
-                          'label' => 'hidden',
-                          'type' => 'text_summary_or_trimmed')));
-                        ?></p>
-                    </div>
-                  <?php endif; ?>
-
-                </header>
-
-                <div class="article-text">
-
-                  <?php if (isset($node->body['und'][0]['value']) && !empty($node->body['und'][0]['value'])) : ?>
-                    <?php print render($content['body']); ?>
-                  <?php endif; ?>
-
-                  <?php
-                                        
-                  if ($node->type == 'poll' || $node->type="quizz"):
-                    // We hide the comments and links now so that we can render them later.
-                    hide($content['comments']);
-                    hide($content['links']);
-                    print render($content);
-                  endif;
-                  ?>
-
-                </div><!--/article-text-->
-
-              </article>
-
-
-
-              <div class="share-section">
-
-  <?php include('.' . base_path() . drupal_get_path('theme', 'drs') . '/templates/includes/share.php'); ?>
-
-              </div><!--/share-section-->
-
-  <?php if (isset($node->field_tags['und']) && !empty($node->field_tags['und'])) : ?>
-                <div class="tags-section">
-                  <h2 class="section-title"><?php echo t('Publié avec les tags') ?> :</h2>
-                  <div class="tags-wrapper">
-                    <ul>
-
-                      <?php
-                      foreach ($node->field_tags['und'] as $tag) {
-                        $options['attributes'] = array('class' => 'tag');
-                        print '<li>' . l($tag['taxonomy_term']->name, 'liste-contenu/' . strtolower($tag['tid']), $options) . '</li>';
-                      }
-                      ?>
-                    </ul>
-                  </div>
-                  <!--/tags-wrapper-->
-
-                </div><!--/tags-section-->
-  <?php endif; ?>
-
-
-
-            </div><!--/block-white-->
-
-          </div><!--/blod-pad-->
-        </div><!--/block-->
-
-
-
-
-
-
-      </div><!--/max-width-->
-
-    </main>
-
-
-  </div><!--/page-->
-
-
-<?php endif; ?>
+<article class="block-1">
+    <h2 class="titre">Titre block-1</h2>
+    <div class="content"><b>this is an bold text</b><br><b>this is an bold text</b><br><b>this is an bold text</b><br><b>this is an bold text</b><br></div>
+</article>

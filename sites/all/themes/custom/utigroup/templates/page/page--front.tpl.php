@@ -4,8 +4,9 @@
  * and open the template in the editor.
  */
 ?>
+ 
 <!--header -->
-<header class="header">
+<header class="header">   
     <div class="header-wrapper">
         <a class="logo" href="<?php print base_path(); ?>">
             <img src="<?php echo base_path().drupal_get_path('theme', 'utigroup'); ?>/assets/img/media/logo.png" height="60px"/>
@@ -28,9 +29,15 @@
                 <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 784px; height: 346px;">
                     <!-- Slides Container -->
                         <?php print render($page['slide_home']); ?> 
+                        <!-- bullet navigator container -->
+                        <div u="navigator" class="jssorb17" style="position: absolute; bottom: 50px; right: 6px;">
+                                <!-- bullet navigator item prototype -->
+                                <div u="prototype" style="POSITION: absolute; WIDTH: 16px; HEIGHT: 16px;"></div>
+                        </div>
+                        <!-- Bullet Navigator Skin End -->
                 </div>    
             </section>
-            <section class="fil-actu">texte texte texte texte texte</section>
+           <section class="fil-actu"><marquee direction="left">Mon texte va vers la gauche</marquee></section>
             <section class="nos-client">
                 <a href="#">
                     <img src="<?php echo base_path().drupal_get_path('theme', 'utigroup'); ?>/assets/img/logo-mutuelle.jpg" />
@@ -43,17 +50,8 @@
                     <li><a href="#">> Analyste Développeur <br>Oracle</a></li>
                 </ul>
             </section>
-            <section class="information">
-                <a href="#" class="block groupe"><span class="fleche"></span>
-                    <p class="texte">Toute la puissance de la nouvelle intelligence informatique</p>
-                </a>
-                <a href="#" class="block temoignages"><span class="fleche"></span>
-                    <p class="texte">Faites connaissances avec notreentreprise au travers de témoignages de nos collaborateurs</p>
-                </a>
-                <a href="#" class="block rejoigneznous"><span class="fleche"></span>
-                <p class="texte">Découvrez ici notre processus de recrutement et postulez en ligne</p>
-                </a>
-            </section>
+            
+               <?php print render($page['footer_block']); ?>            
         </div>
     </div>
     <!--footer -->
@@ -73,5 +71,5 @@
                 </div>
         </div>
     </footer>
-</div>
+    
 <!--/page-->

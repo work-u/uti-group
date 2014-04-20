@@ -7,7 +7,9 @@ function utigroup_preprocess_html(&$vars) {
     drupal_add_js(base_path() . path_to_theme() . '/assets/js/plugins/modernizr.custom.js', array('type' => 'file', 'scope' => 'header'));
     drupal_add_js(base_path() . path_to_theme() . '/assets/js/plugins/respond.js', array('type' => 'file', 'scope' => 'header'));
     drupal_add_js(base_path() . path_to_theme() . '/assets/js/jQuery/jquery.min.js', array('type' => 'file', 'scope' => 'footer'));
-    drupal_add_js(base_path() . path_to_theme() . '/assets/js/plugins/jssor.slider.mini.js', array('type' => 'file', 'scope' => 'footer'));
+    drupal_add_js(base_path() . path_to_theme() . '/assets/js/plugins/jssor/jssor.core.js', array('type' => 'file', 'scope' => 'footer'));
+	drupal_add_js(base_path() . path_to_theme() . '/assets/js/plugins/jssor/jssor.utils.js', array('type' => 'file', 'scope' => 'footer'));
+	drupal_add_js(base_path() . path_to_theme() . '/assets/js/plugins/jssor/jssor.slider.js', array('type' => 'file', 'scope' => 'footer'));
     drupal_add_js(base_path() . path_to_theme() . '/assets/js/script.js', array('type' => 'file', 'scope' => 'footer'));
     drupal_add_js(base_path() . path_to_theme() . '/assets/js/custom.js', array('type' => 'file', 'scope' => 'footer'));
 }
@@ -45,18 +47,19 @@ function utigroup_menuSupeieur() {
     $key = 0;
     foreach ($menus as $menu):
 		if ($menu['link']['depth'] == 1) {                
-                $content .= '<li class=" '.join(' ', $menu['link']['options']['attributes']['class']).'"><a href="'.url($menu['link']['href']).'">'.$menu['link']['link_title'] . '</a></li>'; //1 niveau                
-                // if (!empty($menu['below'])) {
-                    // $content .= '<ul>'; //2 niveau
-                    // foreach ($menu['below'] as $menub):
-                        // $__link = $menub['link']['link_title'];
-                        // $link = url($menub['link']['href']);
-                        // $options = (array('attributes' => array('class' => array()), 'html' => FALSE, 'external' => TRUE));
+                $content .= '<li class=" '.join(' ', $menu['link']['options']['attributes']['class']).'"><a href="'.url($menu['link']['href']).'">'.$menu['link']['link_title'] . '</a>'; //1 niveau                
+                 if (!empty($menu['below'])) {
+                     $content .= '<ul>'; //2 niveau
+                     foreach ($menu['below'] as $menub):
+                         $__link = $menub['link']['link_title'];
+                         $link = url($menub['link']['href']);
+                         $options = (array('attributes' => array('class' => array()), 'html' => FALSE, 'external' => TRUE));
 
-                        // $content .= '<li>' . l($__link, $link, $options) . '</li>'; //2 niveau
-                    // endforeach;
-                    // $content .= '</ul>'; //2 niveau
-                // }
+                        $content .= '<li>' . l($__link, $link, $options) . '</li>'; //2 niveau
+                     endforeach;
+                    $content .= '</ul>'; //2 niveau
+                }
+			  $content .= '</li>';
              }
             $key++;
             continue;
@@ -80,8 +83,11 @@ function utigroup_get_this_menu($this_menu) {
     $key = 0;
     foreach ($menus as $menu):
         $class=""; 
+        if(isset($menu['link']['options']['attributes']['class'])){
+         $class =  join(' ', $menu['link']['options']['attributes']['class']); 
+        }        
         if ($menu['link']['depth'] == 1) {                
-                $content .= '<li class="'.join(' ', $menu['link']['options']['attributes']['class']).'"><a href="'.url($menu['link']['href']).'">'.$menu['link']['link_title'] . '</a></li>';
+                $content .= '<li class="'.$class.'"><a href="'.url($menu['link']['href']).'">'.$menu['link']['link_title'] . '</a></li>';
              }
             $key++;
             continue;
