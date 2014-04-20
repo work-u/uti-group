@@ -6,6 +6,7 @@ version = VERSION
 core = 7.x
 
 stylesheets[all][] = assets/css/reset.css
+stylesheets[all][] = assets/css/font.css
 stylesheets[all][] = assets/css/global.css
 stylesheets[all][] = assets/css/menu.css
 stylesheets[all][] = assets/css/style.css

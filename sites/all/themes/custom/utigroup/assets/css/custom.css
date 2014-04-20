@@ -1,0 +1,36 @@
+html body.admin-menu {
+	margin-top: 50px !important;
+}
+.home-slider .item-slid .wrap-content{
+	position: absolute;
+	top: 10px;
+	left: 85px;
+	width: 440px;
+}
+.home-slider .item-slid.orientation-right .wrap-content{
+	left: initial;
+	right: 45px;
+}
+.home-slider .item-slid .wrap-content .slid-title{
+	padding-top: 25px;
+	padding-bottom: 13px;
+	line-height: 32px;
+	Text-Indent: -10px;
+	Padding-Left: 10px;
+}
+.home-slider .item-slid .wrap-content .slid-title,
+.home-slider .item-slid .wrap-content .slid-title a:link,
+.home-slider .item-slid .wrap-content .slid-title a:hover,
+.home-slider .item-slid .wrap-content .slid-title a:active{
+	font-family: 'androgyneregular';
+	font-size: 26px;
+	font-weight: bold;
+	color: #003366;
+	text-decoration: none;
+}
+.home-slider .item-slid .wrap-content .slid-description{
+	padding-left: 56px;
+	line-height: 18px;
+	font-size: 13px;
+	width: 280px;
+}
