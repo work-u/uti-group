@@ -6,6 +6,10 @@ body {
 	font-family:arial;
 }
 
+html body.admin-menu {
+	margin-top: 50px !important;
+}
+
 .body-wrapper {
 	margin:0 auto;
 	width:784px;
@@ -22,7 +26,7 @@ footer.footer {
 	background:#000;
 }
 
-.main {position:relative;min-height: 325px;background-color: #fff;}
+.main {position:relative;min-height: 325px;background-color: #fff;padding-top: 30px;}
 
 /*HEADER*/
 .header a.logo{display:block;float:left;width:132px;}
@@ -32,7 +36,8 @@ footer.footer {
 .main .slideshow {height:345px;background-color:#fff;position: relative;z-index: 1;}
 .main .fil-actu {height:20px;line-height:20px; background:transparent url(../img/background-fil-actu.png) center center no-repeat;padding:9px 20px;margin-top: -38px;position: relative;z-index: 2;}
 .main .nos-client {position:absolute;z-index:99;top: 190px;left: -120px;width:160px;height:100px;border:solid 5px #33cccc;background:#fff;}
-.main .dernieres-offres {position:absolute;z-index:99;top: 38px;right: -120px;width:160px;min-height:50px;border:solid 5px #cc0066;background:#fff;}
+.main .dernieres-offres {position:absolute;z-index:99;top: 68px;right: -120px;width:160px;min-height:50px;border:solid 5px #cc0066;background:#fff;}
+
 .main .dernieres-offres h2.titre{padding: 5px 15px;text-transform: uppercase;text-align: center;width: 118px;color:#1a171b;font-size:11px;height: 27px;margin: -8px 0 0 5px;background:transparent url(../img/back-title-offre-emploi.png) center center no-repeat;}
 .main .dernieres-offres  ul{list-style:none;padding:10px 0;}
 .main .dernieres-offres  ul li {padding:2px 10px;}
@@ -81,7 +86,39 @@ cursor: pointer;
 .jssorb17 div:hover, .jssorb17 .av:hover { background-position: -37px -7px; }
 .jssorb17 .av { background-position: -67px -7px; }
 .jssorb17 .dn, .jssorb17 .dn:hover { background-position: -97px -7px; }
-
+.home-slider .item-slid .wrap-content{
+	position: absolute;
+	top: 10px;
+	left: 85px;
+	width: 440px;
+}
+.home-slider .item-slid.orientation-right .wrap-content{
+	left: initial;
+	right: 45px;
+}
+.home-slider .item-slid .wrap-content .slid-title{
+	padding-top: 25px;
+	padding-bottom: 13px;
+	line-height: 32px;
+	Text-Indent: -10px;
+	Padding-Left: 10px;
+}
+.home-slider .item-slid .wrap-content .slid-title,
+.home-slider .item-slid .wrap-content .slid-title a:link,
+.home-slider .item-slid .wrap-content .slid-title a:hover,
+.home-slider .item-slid .wrap-content .slid-title a:active{
+	font-family: 'androgyneregular';
+	font-size: 26px;
+	font-weight: bold;
+	color: #003366;
+	text-decoration: none;
+}
+.home-slider .item-slid .wrap-content .slid-description{
+	padding-left: 56px;
+	line-height: 18px;
+	font-size: 13px;
+	width: 280px;
+}
 /*PAGE*/
 .main .main-content{width:664px;padding:38px 60px;}
 .main .main-content h1.titre{padding:0 50px;margin:0;height:70px;line-height:70px;color:#fff;font-size:23px;
