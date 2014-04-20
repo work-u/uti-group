@@ -1,16 +1,16 @@
 jQuery(document).ready(function ($) {
 	if($.fn.fancybox)
-	$(".fancybox").fancybox({
-				maxWidth	: 800,
-				maxHeight	: 600,
-				fitToView	: false,
-				width		: '70%',
-				height		: '70%',
-				autoSize	: false,
-				closeClick	: false,
-				openEffect	: 'none',
-				closeEffect	: 'none'
-			});
+		$(".fancybox").fancybox({
+					maxWidth	: 800,
+					maxHeight	: 600,
+					fitToView	: false,
+					width		: '70%',
+					height		: '70%',
+					autoSize	: false,
+					closeClick	: false,
+					openEffect	: 'none',
+					closeEffect	: 'none'
+				});
 
 
 	var options_jssorSlider = {
@@ -29,7 +29,4 @@ jQuery(document).ready(function ($) {
 	};
 	
 	var jssor_slider1 = new $JssorSlider$("slider1_container", options_jssorSlider);
-	
-
-
 });
