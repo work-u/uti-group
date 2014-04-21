@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Vue Liste Chiffre feature.
- */
-
-include_once 'vue_liste_chiffre.features.inc';

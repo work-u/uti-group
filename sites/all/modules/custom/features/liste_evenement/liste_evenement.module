@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Liste evenement feature.
- */
-
-include_once 'liste_evenement.features.inc';

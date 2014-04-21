@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Point list feature.
- */
-
-include_once 'point_list.features.inc';

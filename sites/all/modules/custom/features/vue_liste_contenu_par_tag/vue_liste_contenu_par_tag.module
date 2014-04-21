@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Vue Liste Contenu par tag feature.
- */
-
-include_once 'vue_liste_contenu_par_tag.features.inc';

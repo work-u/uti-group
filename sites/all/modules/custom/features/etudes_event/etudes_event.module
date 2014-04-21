@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Etude et Evenement feature.
- */
-
-include_once 'etudes_event.features.inc';

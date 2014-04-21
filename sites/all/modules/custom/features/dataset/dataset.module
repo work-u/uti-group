@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the dataset feature.
- */
-
-include_once 'dataset.features.inc';

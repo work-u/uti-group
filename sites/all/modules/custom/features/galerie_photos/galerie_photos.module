@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Galerie photos feature.
- */
-
-include_once 'galerie_photos.features.inc';
