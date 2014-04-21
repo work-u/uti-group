@@ -183,10 +183,10 @@ font-family: 'androgyneregular';
 .bg-metiers{background:transparent url(../img/bg-nos-principaux-metiers.jpg) center center no-repeat;}
 
 /*background à changer par Anis*/
-.bg-produits{background:transparent url(../img/bg-notre-offre.jpg) center center no-repeat;}
-.bg-banques-finances{background:transparent url(../img/bg-notre-offre.jpg) center center no-repeat;}
-.bg-assurances-mutuelle-retraite{background:transparent url(../img/bg-notre-offre.jpg) center center no-repeat;}
-.bg-industrie-services{background:transparent url(../img/bg-notre-offre.jpg) center center no-repeat;}
+.bg-produits{background:transparent url(../img/image-secteur-produits.jpg) center center no-repeat;}
+.bg-banques-finances{background:transparent url(../img/image-secteur-banque.jpg) center center no-repeat;}
+.bg-assurances-mutuelle-retraite{background:transparent url(../img/image-secteur-assurance.jpg) center center no-repeat;}
+.bg-industrie-services{background:transparent url(../img/image-secteur-industrie.jpg) center center no-repeat;}
 
 .block-3 .get-all{width:100%;height:100%;position:relative;}
 
