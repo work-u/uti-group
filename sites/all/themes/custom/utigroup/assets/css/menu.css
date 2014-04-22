@@ -1,16 +1,25 @@
 .menu-principale nav > ul {list-style:none;position: relative;}
 .menu-principale nav > ul > li{
 float: left;
-padding: 10px 0px 0 0px;
+padding: 20px 0px 0 0px;
 width: 102px;
-height: 50px;
+height: 40px;
 margin-left: 2px;
 }
+
+.menu-principale nav > ul > li.blue:hover,.menu-principale nav > ul > li.blue.active{background: url(../img/themes/blue/arrow-nav.png) center -5px no-repeat;}
+.menu-principale nav > ul > li.blue-ciel:hover,.menu-principale nav > ul > li.blue-ciel.active{background: url(../img/themes/blue-ciel/arrow-nav.png) center -5px no-repeat;}
+.menu-principale nav > ul > li.vert:hover,.menu-principale nav > ul > li.vert.active{background: url(../img/themes/vert/arrow-nav.png) center -5px no-repeat;}
+.menu-principale nav > ul > li.rose:hover,.menu-principale nav > ul > li.rose.active{background: url(../img/themes/rose/arrow-nav.png) center -5px no-repeat;}
+.menu-principale nav > ul > li.mauve:hover,.menu-principale nav > ul > li.mauve.active{background: url(../img/themes/mauve/arrow-nav.png) center -5px no-repeat;}
+.menu-principale nav > ul > li.violet:hover,.menu-principale nav > ul > li.violet.active{background: url(../img/themes/violet/arrow-nav.png) center -5px no-repeat;}
+
+
 .menu-principale nav > ul > li > a{
 	display:table-cell;
 	vertical-align: middle;
 	text-decoration:none;
-	height:40px;
+	height:30px;
 	width:102px;
 	color:#003366;
 	font-size:10.5px;
