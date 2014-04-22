@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * drs_global_functions/drs_global_functions.module Set up global functions.
+ * @author mhammami
+ */
+
+/**
+ * Get Web form Trouver Regime De Retraite Nid.
+ *
+ * @param string $title
+ *   title.
+ *
+ * @return mixed
+ *   boolean.
+ */
+
+function utigroup_global_functions_exist(e){
+    if(isset(e) && !empty(e))
+        return e;
+    else
+    	return '';
+}

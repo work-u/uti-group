@@ -7,19 +7,12 @@ function utigroup_preprocess_html(&$vars) {
     drupal_add_js(base_path() . path_to_theme() . '/assets/js/plugins/modernizr.custom.js', array('type' => 'file', 'scope' => 'header'));
     drupal_add_js(base_path() . path_to_theme() . '/assets/js/plugins/respond.js', array('type' => 'file', 'scope' => 'header'));
     drupal_add_js(base_path() . path_to_theme() . '/assets/js/jQuery/jquery.min.js', array('type' => 'file', 'scope' => 'header'));
-    drupal_add_js(base_path() . path_to_theme() . '/assets/js/plugins/fancybox/jquery.fancybox.js', array('type' => 'file', 'scope' => 'footer'));
     drupal_add_js(base_path() . path_to_theme() . '/assets/js/plugins/jssor/jssor.core.js', array('type' => 'file', 'scope' => 'footer'));
-    drupal_add_js(base_path() . path_to_theme() . '/assets/js/plugins/jssor/jssor.utils.js', array('type' => 'file', 'scope' => 'footer'));
-    drupal_add_js(base_path() . path_to_theme() . '/assets/js/plugins/jssor/jssor.slider.js', array('type' => 'file', 'scope' => 'footer'));
+	drupal_add_js(base_path() . path_to_theme() . '/assets/js/plugins/jssor/jssor.utils.js', array('type' => 'file', 'scope' => 'footer'));
+	drupal_add_js(base_path() . path_to_theme() . '/assets/js/plugins/jssor/jssor.slider.js', array('type' => 'file', 'scope' => 'footer'));
     drupal_add_js(base_path() . path_to_theme() . '/assets/js/script.js', array('type' => 'file', 'scope' => 'footer'));
     drupal_add_js(base_path() . path_to_theme() . '/assets/js/custom.js', array('type' => 'file', 'scope' => 'footer'));
-  
-  if (arg(0) == "activites") {
-        $vars['classes_array'][] = 'blue-ciel-theme';
-    }  
-    
 }
-
 
 /**
  * @file template.php
@@ -56,7 +49,7 @@ function utigroup_menuSupeieur() {
         //echo "<pre>";
         //print_r($menu['link']);
 		if ($menu['link']['depth'] == 1 && !$menu['link']['hidden'] ) {                
-                $content .= '<li class=" '.join(' ', $menu['link']['options']['attributes']['class']).'"><a href="'.url($menu['link']['href']).'">'.$menu['link']['link_title'] . '</a>'; //1 niveau                
+                $content .= '<li class=" '.utigroup_global_functions_exist($menu['link']['options']['attributes']['class']).'"><a href="'.url($menu['link']['href']).'">'.$menu['link']['link_title'] . '</a>'; //1 niveau                
                  if (!empty($menu['below'])) {
                      $content .= '<ul>'; //2 niveau
                      foreach ($menu['below'] as $menub):
@@ -104,4 +97,10 @@ function utigroup_get_this_menu($this_menu) {
     endforeach;
 
     return $content;
+}
+function utigroup_global_functions_exist($e){
+    if(isset($e) && !empty($e))
+        return join(' ', $e);
+    else
+        return '';
 }
