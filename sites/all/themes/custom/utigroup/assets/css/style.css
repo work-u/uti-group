@@ -122,7 +122,7 @@ cursor: pointer;
 }
 /*PAGE*/
 .main .main-content{width:664px;padding:38px 60px;}
-.main .main-content h1.titre{padding:0 50px;margin:0;height:70px;line-height:70px;color:#fff;font-size:23px;
+.main .main-content h1.titre, .main .main-content .h1.titre{padding:0 50px;margin:0;height:70px;line-height:70px;color:#fff;font-size:23px;
 -webkit-border-top-left-radius: 22px;-moz-border-radius-topleft: 22px;border-top-left-radius: 22px;
 -webkit-border-bottom-right-radius: 22px;-moz-border-radius-bottomright: 22px;border-bottom-right-radius: 22px;
 margin-bottom:20px;
@@ -143,7 +143,8 @@ font-family: 'androgyneregular';
 .w1.block-2 {width:500px;}
 .w1.block-2 .content {width:135px;min-height: 198px;}
 .w1.block-2 .image  {padding:25px 19px;}
-
+.with-txt.block-2 .image  {padding:25px 39px;}
+.with-txt.block-2 .image p {width: 325px;padding-top: 15px;}
 
 .block-3{margin-bottom:20px;border:solid 2px #33cccc;-webkit-border-top-left-radius: 22px;-moz-border-radius-topleft: 22px;border-top-left-radius: 22px;
 -webkit-border-bottom-right-radius: 22px;-moz-border-radius-bottomright: 22px;border-bottom-right-radius: 22px;overflow:hidden;position:relative;}
@@ -200,6 +201,23 @@ font-family: 'androgyneregular';
 
 .block-3 .get-all:hover{width:100%;height:100%;background: url(../img/block-3-hover-blue-ciel.png);}
 .block-3 .get-all:hover{width:100%;height:100%;background: url(../img/block-3-hover-blue-ciel.png);}
+
+.block-5{margin-bottom:20px;}
+.block-5 .left{width:258px}
+.block-5 .right{width:390px;}
+.block-5 .left .round-style{padding:20px;color:white;-webkit-border-top-left-radius: 22px;-moz-border-radius-topleft: 22px;border-top-left-radius: 22px;-webkit-border-bottom-right-radius: 22px;-moz-border-radius-bottomright: 22px;border-bottom-right-radius: 22px;}
+
+
+
+.block-4 {margin:85px 0;}
+.block-4 .carreau{width:155px;height:155px;float:left;background-color:#99cc33;-webkit-border-top-left-radius: 22px;-moz-border-radius-topleft: 22px;border-top-left-radius: 22px;-webkit-border-bottom-right-radius: 22px;-moz-border-radius-bottomright: 22px;border-bottom-right-radius: 22px;margin:0 0 0 14px;}
+.block-4 .carreau:first-child{margin-left:0;}
+.block-4 .carreau .content{width:155px;height:155px;display:table-cell;vertical-align: middle;text-align:center;position:relative;cursor:pointer;text-decoration: none;}
+.block-4 .carreau .content .annee{color:#fff;font-size:31px;font-weight:bold;}
+.block-4 .carreau .content .titre{color:#003366;font-size:19px;}
+.block-4 .carreau .content .savoir-plus{position:absolute;bottom:10px;color:#fff;font-size:11px;left:0;width:100%;}
+.block-4 .carreau .content .arrow-right{position:absolute;top: 49px;right: -17px;width:32px;height:52px;background: url(../img/themes/gris/arrow-nav-right.png);}
+
 
 
 /*FANCYBOX CUSTUM*/

@@ -9,11 +9,12 @@
 .blue-theme.body .main .main-content .block-1 .titre,
 .blue-theme.body .block-2 .content,
 .blue-theme.body .block-3 .titre,
-.blue-theme.body .fancybox-titre {
+.blue-theme.body .fancybox-titre,
+.blue-theme .bg-color {
 	background-color:#003366;
 }
 
-.blue-theme.body  .fancybox-content .color{
+.blue-theme.body  .fancybox-content .color,.blue-theme.body .color{
 	color:#003366;
 }
 
@@ -39,11 +40,12 @@
 .blue-ciel-theme.body .main .main-content .block-1 .titre,
 .blue-ciel-theme.body .block-2 .content,
 .blue-ciel-theme.body .block-3 .titre,
-.blue-ciel-theme.body .fancybox-titre {
+.blue-ciel-theme.body .fancybox-titre,
+.blue-ciel-theme .bg-color {
 	background-color:#33cccc;
 }
 
-.blue-ciel-theme.body  .fancybox-content .color{
+.blue-ciel-theme.body  .fancybox-content .color,.blue-ciel-theme.body .color{
 	color:#33cccc;
 }
 
@@ -71,11 +73,12 @@
 .vert-theme.body .main .main-content .block-1 .titre,
 .vert-theme.body .block-2 .content,
 .vert-theme.body .block-3 .titre,
-.vert-theme.body .fancybox-titre {
+.vert-theme.body .fancybox-titre,
+.vert-theme .bg-color{
 	background-color:#9C3;
 }
 
-.vert-theme.body  .fancybox-content .color{
+.vert-theme.body  .fancybox-content .color,.vert-theme.body .color{
 	color:#9C3;
 }
 
@@ -103,11 +106,12 @@
 .rose-theme.body .main .main-content .block-1 .titre,
 .rose-theme.body .block-2 .content,
 .rose-theme.body .block-3 .titre,
-.rose-theme.body .fancybox-titre {
+.rose-theme.body .fancybox-titre,
+.rose-theme .bg-color {
 	background-color:#C06;
 }
 
-.rose-theme.body  .fancybox-content .color{
+.rose-theme.body  .fancybox-content .color,.rose-theme.body .color{
 	color:#C06;
 }
 
@@ -134,11 +138,12 @@
 .mauve-theme.body .main .main-content .block-1 .titre,
 .mauve-theme.body .block-2 .content,
 .mauve-theme.body .block-3 .titre,
-.mauve-theme.body .fancybox-titre {
+.mauve-theme.body .fancybox-titre,
+.mauve-theme .bg-color {
 	background-color:#5F2181;
 }
 
-.mauve-theme.body  .fancybox-content .color{
+.mauve-theme.body  .fancybox-content .color,.mauve-theme.body .color{
 	color:#5F2181;
 }
 
@@ -166,11 +171,12 @@
 .violet-theme.body .main .main-content .block-1 .titre,
 .violet-theme.body .block-2 .content,
 .violet-theme.body .block-3 .titre,
-.violet-theme.body .fancybox-titre {
+.violet-theme.body .fancybox-titre,
+.violet-theme .bg-color {
 	background-color:#969;
 }
 
-.violet-theme.body  .fancybox-content .color{
+.violet-theme.body  .fancybox-content .color,.violet-theme.body .color{
 	color:#969;
 }
 
