@@ -38,12 +38,17 @@ footer.footer {
 .main .nos-client h2.titre{padding: 5px 15px;text-transform: uppercase;text-align: center;width: 118px;color:#1a171b;font-size:11px;height: 17px;margin: -8px 0 0 5px;background:transparent url(../img/back-title-nos-clien.png) center center no-repeat;position: absolute;top:0;}
 .main .nos-client {position:absolute;z-index:99;top: 190px;left: -120px;width:160px;height:100px;border:solid 5px #33cccc;background:#fff;}
 .main .dernieres-offres {position:absolute;z-index:99;top: 68px;right: -120px;width:160px;min-height:50px;border:solid 5px #cc0066;background:#fff;}
-
 .main .dernieres-offres h2.titre{padding: 5px 15px;text-transform: uppercase;text-align: center;width: 118px;color:#1a171b;font-size:11px;height: 27px;margin: -8px 0 0 5px;background:transparent url(../img/back-title-offre-emploi.png) center center no-repeat;}
 .main .dernieres-offres  ul{list-style:none;padding:10px 0;}
 .main .dernieres-offres  ul li {padding:2px 10px;}
 .main .dernieres-offres  ul li a{color:#000;font-size:11px;text-decoration:none;}
 .main .dernieres-offres  ul li a:hover{color:#cc0066;font-size:11px;text-decoration:none;}
+
+.main .sidebar{position:absolute;z-index:99;top: 68px;right: -120px;width:170px;min-height:50px;}
+.main .sidebar .dernieres-offres{position:relative;top: 0px;right: 0px;width:160px;border:solid 5px #cc0066;background:#fff;}
+.main .sidebar .button-section{width:165px;color:#fff;font-family: 'androgyneregular';font-size:19px;text-align:center;position:relative;display:block;padding:16px 0;margin: 5px 0 5px 5px;-webkit-border-top-left-radius: 22px;-moz-border-radius-topleft: 22px;border-top-left-radius: 22px;-webkit-border-bottom-right-radius: 22px;-moz-border-radius-bottomright: 22px;border-bottom-right-radius: 22px;text-decoration:none;}
+.main .sidebar .button-section .arrow-left{position:absolute;top: 12px;left: -5px;width:17px;height:32px;background: url(../img/themes/gris/arrow-nav-right-small.png);}
+
 .main .information {height:142px;background-color:#c2dee9;overflow:hidden;padding:0px 17px;}
 .main .information .block{width:242px;height:125px;float:left;position:relative;margin:9px 4px;display:block;text-decoration:none;}
 .main .information .block .fleche{width:43px;height:25px;position:absolute;top: -5px;left: 100px;background:transparent url(../img/fleche-gris.png) center center no-repeat;}
@@ -51,6 +56,8 @@ footer.footer {
 .main .information .groupe{background:transparent url(../img/back-groupe.png) center center no-repeat;}
 .main .information .temoignages{background:transparent url(../img/back-temoignages.png) center center no-repeat;}
 .main .information .rejoigneznous{background:transparent url(../img/back-rejoigneznous.png) center center no-repeat;}
+
+
 
 /*FOOTER*/
 footer.footer > .footer-wrapper{overflow:hidden;margin:0 20px;}
@@ -209,21 +216,38 @@ font-family: 'androgyneregular';
 
 .block-5 .border-round-style{margin-bottom:20px;padding:15px;border:solid 1px #868789;-webkit-border-top-left-radius: 22px;-moz-border-radius-topleft: 22px;border-top-left-radius: 22px;-webkit-border-bottom-right-radius: 22px;-moz-border-radius-bottomright: 22px;border-bottom-right-radius: 22px;}
 
-
 .w1.block-5 .left-wrapper{width:390px;}
 .w1.block-5 .right-wrapper{width:255px;}
 
+.block-4 {margin:85px auto;}
+.w1.block-4{width:494px;}
+.w2.block-4{width: 338px;margin: 30px auto;}
+.w2.block-4 .carreau{margin:0 7px 14px 7px;}
+.w2.block-4 .carreau:first-child {margin-left:7px;}
 
-
-.block-4 {margin:85px 0;}
-.block-4 .carreau{width:155px;height:155px;float:left;background-color:#99cc33;-webkit-border-top-left-radius: 22px;-moz-border-radius-topleft: 22px;border-top-left-radius: 22px;-webkit-border-bottom-right-radius: 22px;-moz-border-radius-bottomright: 22px;border-bottom-right-radius: 22px;margin:0 0 0 14px;}
+.block-4 .carreau{width:155px;height:155px;float:left;-webkit-border-top-left-radius: 22px;-moz-border-radius-topleft: 22px;border-top-left-radius: 22px;-webkit-border-bottom-right-radius: 22px;-moz-border-radius-bottomright: 22px;border-bottom-right-radius: 22px;margin-left:14px;}
 .block-4 .carreau:first-child{margin-left:0;}
 .block-4 .carreau .content{width:155px;height:155px;display:table-cell;vertical-align: middle;text-align:center;position:relative;cursor:pointer;text-decoration: none;}
 .block-4 .carreau .content .annee{color:#fff;font-size:31px;font-weight:bold;}
-.block-4 .carreau .content .titre{color:#003366;font-size:19px;}
+.block-4 .carreau .content .titre{color:#003366;font-size:19px;padding: 0 11px;}
 .block-4 .carreau .content .savoir-plus{position:absolute;bottom:10px;color:#fff;font-size:11px;left:0;width:100%;}
 .block-4 .carreau .content .arrow-right{position:absolute;top: 49px;right: -17px;width:32px;height:52px;background: url(../img/themes/gris/arrow-nav-right.png);}
+.block-6 {height: 300px;overflow-y: scroll;}
+.block-6  .personne{height:158px;display: table;margin-bottom:15px;}
+.block-6  .personne .image{}
+.block-6  .personne .info{display: table-cell;vertical-align: bottom;background-color:#fff;width: 140px;padding: 0 8px 0 15px;font-size:12px;font-weight:bold;line-height:16px;}
+.block-6  .personne .info .nom{font-size:12px;font-weight:bold;}
+.block-6  .personne .info .statut{font-size:12px;font-weight:bold;}
+.block-6  .personne .info .pays{color:#808080;}
 
+.block-7 table{width:100%;text-align:left;font-size:12px;padding:0;margin:0;border:solid 1px #C06;border-collapse: separate;overflow:hidden;-webkit-border-top-left-radius: 22px;-moz-border-radius-topleft: 22px;border-top-left-radius: 22px;}
+.block-7 table thead{}
+.block-7 table thead tr{font-size:16px;padding:5px;background:#C06;color:#fff;}
+.block-7 table thead tr th{font-size:16px;padding:5px;}
+.block-7 table td,.block-7 table th{padding:5px;}
+.block-7 table th.col1,.block-7 table td.col1{width:60%;}
+.block-7 table th.col2,.block-7 table td.col2{width:20%;}
+.block-7 table th.col3,.block-7 table td.col3{width:20%;}
 
 
 /*FANCYBOX CUSTUM*/
