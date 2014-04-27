@@ -37,7 +37,7 @@
                         <!-- Bullet Navigator Skin End -->
                 </div>    
             </section>
-           <section class="fil-actu"><marquee direction="left"><a href="#"><span class="titre">ACTUS ></span>  Lancement du G.R.H. sur l'intranet   ///   UTIGroup sponsorise "Les entretiens de l'excellence"</a></marquee></section>
+           <section class="fil-actu"><marquee direction="left"><?php print render($page['actualites_home']); ?> </marquee></section>
             <section class="nos-client">
                 <h2 class="titre"><?php echo t("Nos clients"); ?></h2>
                     <img src="<?php echo base_path().drupal_get_path('theme', 'utigroup'); ?>/assets/img/logo-mutuelle.jpg" />

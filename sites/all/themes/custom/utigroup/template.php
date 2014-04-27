@@ -19,7 +19,10 @@ function utigroup_preprocess_html(&$vars) {
     } 
   if (arg(0) == "secteur") {
         $vars['classes_array'][] = 'vert-theme';
-    }   
+    } 
+   if (arg(0) == "uti-en-bref" || arg(0) == "groupe-qualite" || arg(0) == "groupe-actualites") {
+        $vars['classes_array'][] = 'blue-theme';
+    }  
     
 }
 

@@ -1,7 +1,11 @@
+#block-views-actualites-acceuil-block > h2{
+	display: none;
+}
 .fil-actu a,
 .fil-actu a:link{
 	text-decoration: none;
 	color: #939598;
+	margin: 0 10px;
 }
 .fil-actu a:hover{
 	text-decoration: underline;

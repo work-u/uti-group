@@ -14,9 +14,10 @@ stylesheets[all][] = assets/js/plugins/fancybox/jquery.fancybox.css
 stylesheets[all][] = assets/css/custom.css
 
 
-regions[slide_home]                    = slide home
+regions[slide_home]                = slide home
+regions[actualites_home]           = Actualites home
 regions[navigation]                = Navigation
-regions[footer_block]               = footer block
+regions[footer_block]              = footer block
 regions[help]                      = Help
 regions[main_menu]                 = Main menu
 regions[top_content]               = Top Content (Presentation and Organisation)
