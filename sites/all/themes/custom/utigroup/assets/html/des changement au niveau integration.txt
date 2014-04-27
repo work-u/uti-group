@@ -1,0 +1,12 @@
+rejoignez nous-1-process-de-recrutement.html
+rejoignez nous-2-integration.html
+rejoignez nous-3-suivi-de-carriere.html
+rejoignez nous-4-vie-dans-entreprise .html(j'ai integré la psd c'est pas la meme que dans la cahier de charge)
+rejoignez nous-5-candidature.html(la formulaire n'est pas integré elle doit etre apres le developpement)
+rejoignez-nous-6-annonces.html(la formulaire n'est pas integré elle doit etre apres le developpement + juste une petite modification illila)
+***************************************************************
+PAGE :groupe-uti-en-bref.html : 
+RQUE :
+1-ajouter class .bg-vert à coté des class .carreau <div class="carreau bg-vert">
+2-ajouter <div class="arrow-right"></div> comme l'integration
+***************************************************************

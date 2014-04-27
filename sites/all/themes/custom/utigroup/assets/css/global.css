@@ -36,12 +36,17 @@
 .clearfix {
   zoom: 1;
 }
-
+b,strong{font-weight:bold;}
 .left{float:left;}
 .right{float:right;}
 .display-none{display:none;}
 .mr-3{margin-right:3px;}
-b,strong{font-weight:bold;}
+.mt-15{margin-top:15px;}
+.mt-30{margin-top:30px;}
+.mt-45{margin-top:45px;}
+.mt-60{margin-top:60px;}
+
+
 
 .pb-10{padding-bottom:10px;}
 
@@ -56,5 +61,5 @@ b,strong{font-weight:bold;}
 .fs18{font-size:18px;}
 .fs19{font-size:19px;}
 
-.bg-vert{background:#9C3;}
+.bg-vert{background:#9C3!important;}
 .color-vert{color:#9C3;}

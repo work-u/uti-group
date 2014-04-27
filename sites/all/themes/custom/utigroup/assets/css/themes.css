@@ -10,7 +10,9 @@
 .blue-theme.body .block-2 .content,
 .blue-theme.body .block-3 .titre,
 .blue-theme.body .fancybox-titre,
-.blue-theme .bg-color {
+.blue-theme .bg-color,
+.blue-theme .block-4 .carreau,
+.blue-theme .main .sidebar .button-section {
 	background-color:#003366;
 }
 
@@ -41,7 +43,9 @@
 .blue-ciel-theme.body .block-2 .content,
 .blue-ciel-theme.body .block-3 .titre,
 .blue-ciel-theme.body .fancybox-titre,
-.blue-ciel-theme .bg-color {
+.blue-ciel-theme .bg-color,
+.blue-ciel-theme .block-4 .carreau,
+.blue-ciel-theme .main .sidebar .button-section {
 	background-color:#33cccc;
 }
 
@@ -74,7 +78,9 @@
 .vert-theme.body .block-2 .content,
 .vert-theme.body .block-3 .titre,
 .vert-theme.body .fancybox-titre,
-.vert-theme .bg-color{
+.vert-theme .bg-color,
+.vert-theme .block-4 .carreau,
+.vert-theme .main .sidebar .button-section{
 	background-color:#9C3;
 }
 
@@ -107,7 +113,9 @@
 .rose-theme.body .block-2 .content,
 .rose-theme.body .block-3 .titre,
 .rose-theme.body .fancybox-titre,
-.rose-theme .bg-color {
+.rose-theme .bg-color,
+.rose-theme .block-4 .carreau,
+.rose-theme .main .sidebar .button-section {
 	background-color:#C06;
 }
 
@@ -139,7 +147,9 @@
 .mauve-theme.body .block-2 .content,
 .mauve-theme.body .block-3 .titre,
 .mauve-theme.body .fancybox-titre,
-.mauve-theme .bg-color {
+.mauve-theme .bg-color ,
+.mauve-theme .block-4 .carreau,
+.mauve-theme .main .sidebar .button-section {
 	background-color:#5F2181;
 }
 
@@ -172,7 +182,9 @@
 .violet-theme.body .block-2 .content,
 .violet-theme.body .block-3 .titre,
 .violet-theme.body .fancybox-titre,
-.violet-theme .bg-color {
+.violet-theme .bg-color,
+.violet-theme .block-4 .carreau,
+.violet-theme .main .sidebar .button-section {
 	background-color:#969;
 }
 
