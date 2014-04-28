@@ -42,13 +42,21 @@
             <h2 class="titre">Nos clients</h2>
                 <img src="<?php echo base_path().drupal_get_path('theme', 'utigroup'); ?>/assets/img/logo-mutuelle.jpg" />
         </section>
-        <section class="dernieres-offres">
-            <h2 class="titre">Nos dernières offres d'emploi</h2>
-            <ul>
-                <li><a href="#">> Analyste Programmeur<br>Grand Système Assurance</a></li>
-                <li><a href="#">> Analyste Développeur <br>Oracle</a></li>
-            </ul>
-        </section>
+        <aside class="sidebar">
+                <section class="dernieres-offres">
+                <h2 class="titre">Nos dernières offres d'emploi</h2>
+                <ul>
+                        <li><a href="#">> Analyste Programmeur<br>Grand Système Assurance</a></li>
+                        <li><a href="#">> Analyste Développeur <br>Oracle</a></li>
+                </ul>
+                </section>
+           <?php 
+             if (arg(0) == "recrutement" || arg(0) == "integration" || arg(0) == "suivi-de-carriere"  || arg(0) == "vie-dans-lentreprise") {
+           ?> 
+                <a href="#" class="button-section">Candidature<span class="arrow-left"></span></a>
+                <a href="#" class="button-section">Annonces<span class="arrow-left"></span></a> 
+            <?php  } ?>   
+        </aside>
     </div>
 </div>
 <!--footer -->
