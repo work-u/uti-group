@@ -18,24 +18,31 @@
  * @ingroup views_templates
  */
 ?>
-<div class="h1 titre"><span>Notre démarche qualité</span></div>
+<div class="h1 titre"><span>Développement durable</span></div>
 <div class="clearfix block-5">
-    <div class="left left-wrapper">
-        <?php print($rows[0]['field_photo_groupe']); ?>
-    </div>
-    <div class="right-wrapper right">
-       <?php print($rows[0]['body']); ?>
-    </div>
-</div>
-
-<div class="h1 titre"><span>Notre organisation</span></div>
-<div class="clearfix block-5">
-    <div class="left left-wrapper">
-        <div class="round-style bg-color">
-           <?php print($rows[0]['field_left_description_qualite']); ?>
+    <div class="left-wrapper left">
+        <div class="round-style bg-vert">
+           <?php print($rows[0]['body']); ?>
         </div>
     </div>
     <div class="right-wrapper right">
-       <?php print($rows[0]['field_right_description_qualite']); ?>
+       <?php print($rows[0]['field_right_texte_deve_groupe']); ?>
+    </div>
+</div>
+
+<div class="h1 titre"><span>Responsabilité sociétaledes Entreprises</span></div>
+<div class="clearfix block-5 w1">
+    <?php print($rows[0]['field_texte_top_rse_groupe']); ?>
+    <br>
+    <div class="left-wrapper left">
+        <?php print($rows[0]['field_photo_groupe']); ?>
+    </div>
+    <div class="right-wrapper right">
+        <div class="border-round-style">
+            <?php print($rows[0]['field_texte_encadre_rse_groupe']); ?>
+        </div>
+        <div class="border-round-style">
+            <?php print($rows[0]['field_texte_encadre_rse_groupe']); ?>
+        </div>
     </div>
 </div>

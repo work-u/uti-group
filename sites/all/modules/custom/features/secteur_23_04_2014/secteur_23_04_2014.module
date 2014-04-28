@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the secteur 23-04-2014 feature.
- */
-
-include_once 'secteur_23_04_2014.features.inc';
