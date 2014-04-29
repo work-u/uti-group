@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * @file
+ * Defines installation code for the recruit module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function recruit_install() {
+  // Create job content type.
+  $types = array(
+    array(
+      'type' => 'recruit_job',
+      'name' => 'Job',
+      'base' => 'node_content',
+      'description' => "Default job content type.",
+      'custom' => 1,
+      'modified' => 1,
+      'locked' => 0,
+    ),
+  );
+  foreach ($types as $type) {
+    $type = node_type_set_defaults($type);
+    node_type_save($type);
+    node_add_body_field($type);
+  }
+}

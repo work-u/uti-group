@@ -1,5 +1,0 @@
-; File drs_global_functions/drs_global_functions.info
-name = Footer Contact Form
-description = Footer Contact Form 
-core = 7.x
-package = DRS

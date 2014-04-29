@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * @file
+ * Functional test for Drupal Recruit.
+ */
+
+/**
+ * Test global recruit functionality.
+ */
+class RecruitTest extends DrupalWebTestCase {
+
+  public static function getInfo() {
+    return array(
+      'name' => 'Recruit',
+      'description' => 'Ensure that recruit works.',
+      'group' => 'Recruit',
+    );
+  }
+
+  public function setUp() {
+    parent::setUp('recruit');
+  }
+
+  /**
+   * Ensure the default job is created.
+   */
+  public function testRecruitDefaultJob() {
+    $default_types = array(
+      'recruit_job' => 'Job',
+    );
+
+    // Load the default content types.
+    $types_created = node_type_get_types();
+
+    // Ensure each type exists.
+    foreach ($default_types as $type => $name) {
+      $this->assertTrue(!empty($types_created[$type]), 'Default job has been created.');
+    }
+  }
+
+}

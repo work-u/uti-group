@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * Functional tests for Application sub-module.
+ */
+
+/**
+ * Test the application UI.
+ */
+class RecruitApplicationUITest extends DrupalWebTestCase {
+
+  public static function getInfo() {
+    return array(
+      'name' => 'Application UI',
+      'description' => 'Ensure that application UI works.',
+      'group' => 'Recruit',
+    );
+  }
+
+  public function setUp() {
+    parent::setUp('recruit_application');
+  }
+
+}

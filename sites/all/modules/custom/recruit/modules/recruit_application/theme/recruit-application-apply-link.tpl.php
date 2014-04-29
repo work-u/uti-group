@@ -1,0 +1,1 @@
+<div class="recruit-application-apply-link"><?php print $apply_link ?></div>

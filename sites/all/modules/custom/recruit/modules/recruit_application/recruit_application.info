@@ -1,0 +1,21 @@
+name = Application
+description = Defines the Application entity and associated features.
+package = Recruit
+dependencies[] = recruit
+dependencies[] = entity
+dependencies[] = entityreference
+dependencies[] = rules
+dependencies[] = views
+core = 7.x
+
+; Module includes
+files[] = includes/recruit_application.controller.inc
+
+; Tests
+files[] = tests/recruit_application.test
+; Information added by Drupal.org packaging script on 2014-01-05
+version = "7.x-2.0-alpha1+10-dev"
+core = "7.x"
+project = "recruit"
+datestamp = "1388954615"
+

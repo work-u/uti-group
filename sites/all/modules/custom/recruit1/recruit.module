@@ -1,0 +1,46 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function recruit_menu() {
+
+  $items['admin/config/recruit'] = array(
+    'title' => 'Recruit',
+    'description' => 'Global configuration for the recruit module.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('recruit_admin_settings'),
+    'access arguments' => array('administer site configuration'),
+    'file' => 'recruit.admin.inc',
+  );
+  
+  return $items;
+}
+
+/**
+ * Implements hook_node_view().
+ */
+function recruit_node_view($node, $view_mode) {
+  
+  if($node->type == 'recruit_job') {
+    $node->content['recruit_job_details'] = array(
+      '#weight' => 10,
+      '#theme' => 'recruit_job_details',
+      '#node' => $node,
+    );    
+  }
+
+}
+
+/**
+ * Implements hook_theme().
+ */
+function recruit_theme() {
+  return array(
+    'recruit_job_details' => array(
+      'variables' => array('node' => NULL),
+      'template' => 'recruit-job-details',
+      'path' => drupal_get_path('module', 'recruit') .'/theme',
+    ),
+  );
+}

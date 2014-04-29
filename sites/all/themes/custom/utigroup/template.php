@@ -17,10 +17,10 @@ function utigroup_preprocess_html(&$vars) {
   if (arg(0) == "activites") {
         $vars['classes_array'][] = 'blue-ciel-theme';
     } 
-  if (arg(0) == "secteur") {
+  if (arg(0) == "secteurs") {
         $vars['classes_array'][] = 'vert-theme';
     } 
-   if (arg(0) == "uti-en-bref" || arg(0) == "groupe-qualite" || arg(0) == "groupe-actualites" || arg(0) == "developpement-rse") {
+   if (arg(0) == "groupe") {
         $vars['classes_array'][] = 'blue-theme';
     } 
   if (arg(0) == "recrutement" || arg(0) == "integration" || arg(0) == "suivi-de-carriere" || arg(0) == "vie-dans-lentreprise") {

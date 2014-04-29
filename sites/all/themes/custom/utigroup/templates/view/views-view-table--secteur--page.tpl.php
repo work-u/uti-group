@@ -26,7 +26,7 @@
 
 <div class="block-wrapper clearfix">
     <div class="block-2 w1 h1 left">
-        <div class="content">
+        <div class="content absolute">
             <?php print( $rows[0]['body']); ?>
         </div>
         <div class="image">
@@ -39,7 +39,7 @@
    ?>
     <div style='background:url("<?php echo $imgProd; ?>") no-repeat scroll center center rgba(0, 0, 0, 0);'  class="block-3 right w2 h2">
         <div class="get-all">
-            <div class="titre">Produits</div>
+            <div class="titre"><?php echo t('Produits'); ?></div>
             <div class="content">
                 <?php
                 $tabproduit = explode( ',', $rows[0]['field_produit_secteur'] );
@@ -54,11 +54,11 @@
                 }
                ?>             
                 <div class="clearfix ligne">
-                    <a  href="#line-produits" class="fancybox right">En savoir +</a>
+                    <a  href="#line-produits" class="fancybox right"><?php echo t('En savoir +'); ?></a>
                 </div>
 
                 <div id="line-produits" style="display:none;">
-                    <div class="fancybox-titre">Produits</div>
+                    <div class="fancybox-titre"><?php echo t('Produits'); ?></div>
                     <div class="fancybox-content">
                        <?php print($rows[0]['field_savoir_plus_produits']); ?>
                     </div>
@@ -75,7 +75,7 @@
    ?>
     <div  style='background:url("<?php echo $imgBang; ?>") no-repeat scroll center center rgba(0, 0, 0, 0);' class="block-3 left w3 h2 mr-3">
         <div class="get-all">
-            <div class="titre">Banques/Finances</div>
+            <div class="titre"><?php echo t('Banques/Finances'); ?></div>
             <div class="content">
                <?php
                 $tabbanque = explode( ',', $rows[0]['field_article_banque_scteur'] );
@@ -90,10 +90,10 @@
                 }
                ?> 
                 
-                <div class="clearfix ligne"><a  href="#line-banques-finances" class="fancybox right">En savoir +</a></div>
+                <div class="clearfix ligne"><a  href="#line-banques-finances" class="fancybox right"><?php echo t('En savoir +'); ?></a></div>
 
                 <div id="line-banques-finances" style="display:none;">
-                    <div class="fancybox-titre">Banques/Finances</div>
+                    <div class="fancybox-titre"><?php echo t('Banques/Finances'); ?></div>
                     <div class="fancybox-content">
                        <?php print($rows[0]['field_en_savoir_plusbanque']); ?>
                     </div>
@@ -107,7 +107,7 @@
    ?>
     <div style='background:url("<?php echo $imgAss; ?>") no-repeat scroll center center rgba(0, 0, 0, 0);' class="block-3 left w3 h2 mr-3">
         <div class="get-all">
-            <div class="titre tow-line">Assurances/<br>Mutuelle/retraite</div>
+            <div class="titre tow-line"><?php echo t('Assurances/').'<br>'.t('Mutuelle/retraite'); ?></div>
             <div class="content">
                <?php
                 $tabassurance = explode( ',', $rows[0]['field_article_assurance_secteur'] );
@@ -121,10 +121,10 @@
                <?php
                 }
                ?> 
-                <div class="clearfix ligne"><a  href="#line-assurances-mutuelle-retraite" class="fancybox right">En savoir +</a></div>
+                <div class="clearfix ligne"><a  href="#line-assurances-mutuelle-retraite" class="fancybox right"><?php echo t('En savoir +'); ?></a></div>
 
                 <div id="line-assurances-mutuelle-retraite" style="display:none;">
-                    <div class="fancybox-titre">Assurances/Mutuelle/retraite</div>
+                    <div class="fancybox-titre"><?php echo t('Assurances/Mutuelle/retraite'); ?></div>
                     <div class="fancybox-content">
                         <?php print($rows[0]['field_en_savoir_plus_assurance']); ?>
                     </div>
@@ -138,7 +138,7 @@
    ?>
     <div style='background:url("<?php echo $imgindustrie; ?>") no-repeat scroll center center rgba(0, 0, 0, 0);' class="block-3 right w2 h2">
         <div class="get-all">
-            <div class="titre tow-line">Industrie<br>services</div>
+            <div class="titre tow-line"><?php echo t('Industrie<br>services'); ?></div>
             <div class="content">
                 <?php
                 $tabindustrie = explode( ',', $rows[0]['field_article_industrie_secteur'] );
@@ -152,10 +152,10 @@
                <?php
                 }
                ?> 
-                <div class="clearfix ligne"><a  href="#line-industrie-services" class="fancybox right">En savoir +</a></div>
+                <div class="clearfix ligne"><a  href="#line-industrie-services" class="fancybox right"><?php echo t('En savoir +'); ?></a></div>
 
                 <div id="line-industrie-services" style="display:none;">
-                    <div class="fancybox-titre">Industrie services</div>
+                    <div class="fancybox-titre"><?php echo t('Industrie services'); ?></div>
                     <div class="fancybox-content">
                        <?php print($rows[0]['field_en_savoir_plus_secteur']); ?>
                     </div>

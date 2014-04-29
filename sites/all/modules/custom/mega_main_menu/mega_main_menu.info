@@ -1,6 +1,0 @@
-name = Mega Main Menu
-description = Module Mega Main Menu
-core = 7.x
-version = "7.x-1.0"
-package = DRS
-

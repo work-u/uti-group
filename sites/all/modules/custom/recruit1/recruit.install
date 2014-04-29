@@ -1,0 +1,293 @@
+<?php
+
+
+
+function recruit_install() {
+  //Create vocabulary for job status.
+  $voc_status = (object) array(
+    'name' => 'Job status',
+    'description' => '',
+    'machine_name' => 'recruit_job_status',
+    'help' => '',
+
+  );
+  taxonomy_vocabulary_save($voc_status);
+
+  //Add job status terms
+  $terms[0] = (object) array(
+    'name' => 'Draft',
+    'vid' => $voc_status->vid,
+  );
+  $terms[1] = (object) array(
+    'name' => 'Active',
+    'vid' => $voc_status->vid,
+  );
+  $terms[2] = (object) array(
+    'name' => 'Expired',
+    'vid' => $voc_status->vid,
+  );
+
+  foreach ($terms as $term) {
+    taxonomy_term_save($term);
+  }
+
+  //Create vocabulary for job category.
+  $voc_category = (object) array(
+    'name' => 'Job category',
+    'description' => '',
+    'machine_name' => 'recruit_job_category',
+    'help' => '',
+
+  );
+  taxonomy_vocabulary_save($voc_category);
+
+  //Add job category terms
+  $terms[0] = (object) array(
+    'name' => 'Administration',
+    'vid' => $voc_category->vid,
+  );
+  $terms[1] = (object) array(
+    'name' => 'Information Technology',
+    'vid' => $voc_category->vid,
+  );
+  $terms[2] = (object) array(
+    'name' => 'Management',
+    'vid' => $voc_category->vid,
+  );
+
+  foreach ($terms as $term) {
+    taxonomy_term_save($term);
+  }
+
+
+  //Create vocabulary for job type.
+  $voc_type = (object) array(
+    'name' => 'Job type',
+    'description' => '',
+    'machine_name' => 'recruit_job_type',
+    'help' => '',
+
+  );
+  taxonomy_vocabulary_save($voc_type);
+
+  //Add job type terms
+  $terms[0] = (object) array(
+    'name' => 'Contract',
+    'vid' => $voc_type->vid,
+  );
+  $terms[1] = (object) array(
+    'name' => 'Full-Time',
+    'vid' => $voc_type->vid,
+  );
+  $terms[2] = (object) array(
+    'name' => 'Part-Time',
+    'vid' => $voc_type->vid,
+  );
+  $terms[3] = (object) array(
+    'name' => 'Temp',
+    'vid' => $voc_type->vid,
+  );
+
+  foreach ($terms as $term) {
+    taxonomy_term_save($term);
+  }
+
+  
+  //Add node types.
+  $types = array(
+    array(
+      'type' => 'recruit_job',
+      'name' => st('Job'),
+      'base' => 'node_content',
+      'description' => st("Use <em>jobs</em> for advertising jobs."),
+      'custom' => 1,
+      'modified' => 1,
+      'locked' => 0,
+    ),
+    array(
+      'type' => 'recruit_app',
+      'name' => st('Application'),
+      'base' => 'node_content',
+      'description' => st('Use <em>applications</em> for submitting applications and attach to job.'),
+      'custom' => 1,
+      'modified' => 1,
+      'locked' => 0,
+      'has_title' => 0,
+    ),
+  );
+
+  foreach ($types as $type) {
+    $type = node_type_set_defaults($type);
+    node_type_save($type);
+  }
+
+
+  //Create fields.
+  $fields = array(
+    array(
+      // It is strongly advised to prefix the field name with the name of the module
+      // that defines it, to avoid name clashes. Fields created through Field UI are
+      // prefixed with 'field_'
+      'field_name' => 'recruit_first_name',
+      'type' => 'text',
+      'cardinality' => 1, // Not required, as it's the default
+    ),
+    array(
+      // It is strongly advised to prefix the field name with the name of the module
+      // that defines it, to avoid name clashes. Fields created through Field UI are
+      // prefixed with 'field_'
+      'field_name' => 'recruit_last_name',
+      'type' => 'text',
+      'cardinality' => 1, // Not required, as it's the default
+    ),
+    array(
+      // It is strongly advised to prefix the field name with the name of the module
+      // that defines it, to avoid name clashes. Fields created through Field UI are
+      // prefixed with 'field_'
+      'field_name' => 'recruit_cv',
+      'type' => 'file',
+      'cardinality' => 1, // Not required, as it's the default
+    ),
+    array(
+      // It is strongly advised to prefix the field name with the name of the module
+      // that defines it, to avoid name clashes. Fields created through Field UI are
+      // prefixed with 'field_'
+      'field_name' => 'recruit_cover_letter',
+      'type' => 'file',
+      'cardinality' => 1, // Not required, as it's the default
+    ),
+    array(
+      'field_name' => 'recruit_' . $voc_status->machine_name,
+      'type' => 'taxonomy_term_reference',
+      // Set cardinality to unlimited for tagging.
+      'cardinality' => 1,
+      'settings' => array(
+        'allowed_values' => array(
+          array(
+            'vid' => $voc_status->vid,
+            'parent' => 0,
+          ),
+        ),
+      ),
+    ),
+    array(
+      'field_name' => 'recruit_' . $voc_category->machine_name,
+      'type' => 'taxonomy_term_reference',
+      // Set cardinality to unlimited for tagging.
+      'cardinality' => 1,
+      'settings' => array(
+        'allowed_values' => array(
+          array(
+            'vid' => $voc_category->vid,
+            'parent' => 0,
+          ),
+        ),
+      ),
+    ),
+    array(
+      'field_name' => 'recruit_' . $voc_type->machine_name,
+      'type' => 'taxonomy_term_reference',
+      // Set cardinality to unlimited for tagging.
+      'cardinality' => 1,
+      'settings' => array(
+        'allowed_values' => array(
+          array(
+            'vid' => $voc_type->vid,
+            'parent' => 0,
+          ),
+        ),
+      ),
+    ),
+
+  );
+
+
+  foreach($fields as $field) {
+    field_create_field($field);
+  }
+
+
+
+  $instances = array(
+    array(
+      'field_name' => 'recruit_first_name',
+      'object_type' => 'node',
+      'bundle' => 'recruit_app',
+      'label' => t('First Name'),
+      'description' => t('Please enter in your first name.'),
+      'widget' => array(
+        'type' => 'text_textfield',
+        'weight' => 10,
+      ),
+    ),
+    array(
+      'field_name' => 'recruit_last_name',
+      'object_type' => 'node',
+      'bundle' => 'recruit_app',
+      'label' => t('Last Name'),
+      'description' => t('Please enter in your last name.'),
+      'widget' => array(
+        'type' => 'text_textfield',
+        'weight' => 10,
+      ),
+    ),
+    array(
+      'field_name' => 'recruit_cv',
+      'object_type' => 'node',
+      'bundle' => 'recruit_app',
+      'label' => t('Upload your CV'),
+      'widget' => array(
+        'type' => 'file_generic',
+        'weight' => 11,
+      ),
+    ),
+    array(
+      'field_name' => 'recruit_cover_letter',
+      'object_type' => 'node',
+      'bundle' => 'recruit_app',
+      'label' => t('Upload your cover letter'),
+      'widget' => array(
+        'type' => 'file_generic',
+        'weight' => 12,
+      ),
+    ),
+    array(
+      'field_name' => 'recruit_' . $voc_status->machine_name,
+      'object_type' => 'node',
+      'label' => $voc_status->name,
+      'bundle' => 'recruit_job',
+      'description' => $voc_status->help,
+      'widget' => array(
+        'type' => 'options_select',
+        'weight' => 4,
+      ),
+    ),
+    array(
+      'field_name' => 'recruit_' . $voc_category->machine_name,
+      'object_type' => 'node',
+      'label' => $voc_category->name,
+      'bundle' => 'recruit_job',
+      'description' => $voc_category->help,
+      'widget' => array(
+        'type' => 'options_select',
+        'weight' => 4,
+      ),
+    ),
+    array(
+      'field_name' => 'recruit_' . $voc_type->machine_name,
+      'object_type' => 'node',
+      'label' => $voc_type->name,
+      'bundle' => 'recruit_job',
+      'description' => $voc_type->help,
+      'widget' => array(
+        'type' => 'options_select',
+        'weight' => 4,
+      ),
+    ),
+  );
+  
+  foreach($instances as $instance) {
+    field_create_instance($instance);
+  }
+  
+}

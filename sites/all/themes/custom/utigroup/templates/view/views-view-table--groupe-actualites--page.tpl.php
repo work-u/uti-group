@@ -18,23 +18,23 @@
  * @ingroup views_templates
  */
 ?>
-<h1 class="titre"><span>Actualités</span></h1>
+<h1 class="titre"><span><?php echo t('Actualités'); ?></span></h1>
 <article class="block-1">
-    <h2 class="titre">Collaborateurs</h2>
-    <div class="content">
+    <h2 class="titre"><?php echo t('Collaborateurs'); ?></h2>
+    <div class="content content-wysiwyg">
         <?php print($rows[0]['body']); ?>
     </div>
 </article>
 
 <article class="block-1">
-    <h2 class="titre">Groupe</h2>
+    <h2 class="titre"><?php echo t('Groupe'); ?></h2>
     <div class="content">
         <?php print($rows[0]['field_groupe_actualite']); ?>
     </div>
 </article>
 
 <article class="block-1">
-    <h2 class="titre">Presse</h2>
+    <h2 class="titre"><?php echo t('Presse'); ?></h2>
     <div class="content">
         <?php print($rows[0]['field_presse_groupe_actualite']); ?>
     </div>

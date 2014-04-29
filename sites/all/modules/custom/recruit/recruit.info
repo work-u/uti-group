@@ -1,0 +1,15 @@
+name = Recruit
+description = Defines base Recruit functionality.
+package = Recruit
+dependencies[] = node
+core = 7.x
+
+; Tests
+files[] = tests/recruit.test
+
+; Information added by Drupal.org packaging script on 2014-01-05
+version = "7.x-2.0-alpha1+10-dev"
+core = "7.x"
+project = "recruit"
+datestamp = "1388954615"
+

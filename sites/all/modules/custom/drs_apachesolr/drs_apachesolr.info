@@ -1,6 +1,0 @@
-; File drs_apachesolr/drs_apachesolr.info
-name = Apache solr add indexed fields
-description = add custom indexed fields in the solr search
-core = 7.x
-package = DRS
-dependencies[] = apachesolr_search

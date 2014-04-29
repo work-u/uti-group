@@ -18,24 +18,24 @@
  * @ingroup views_templates
  */
 ?>
-<div class="h1 titre"><span>Notre démarche qualité</span></div>
+<div class="h1 titre"><span><?php echo t('Notre démarche qualité'); ?></span></div>
 <div class="clearfix block-5">
     <div class="left left-wrapper">
         <?php print($rows[0]['field_photo_groupe']); ?>
     </div>
-    <div class="right-wrapper right">
+    <div class="right-wrapper right content-wysiwyg">
        <?php print($rows[0]['body']); ?>
     </div>
 </div>
 
-<div class="h1 titre"><span>Notre organisation</span></div>
+<div class="h1 titre"><span><?php echo t('Notre organisation'); ?></span></div>
 <div class="clearfix block-5">
     <div class="left left-wrapper">
-        <div class="round-style bg-color">
+        <div class="round-style bg-color content-wysiwyg">
            <?php print($rows[0]['field_left_description_qualite']); ?>
         </div>
     </div>
-    <div class="right-wrapper right">
+    <div class="right-wrapper right content-wysiwyg">
        <?php print($rows[0]['field_right_description_qualite']); ?>
     </div>
 </div>

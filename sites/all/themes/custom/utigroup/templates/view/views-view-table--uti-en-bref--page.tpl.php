@@ -18,9 +18,9 @@
  * @ingroup views_templates
  */
 ?>
-<div class="h1 titre"><span>Uti en bref</span></div>
+<div class="h1 titre"><span><?php echo t('Uti en bref'); ?></span></div>
 <article class="clearfix block-2 with-txt">
-    <div class="content">
+    <div class="content absolute content-wysiwyg">
         <?php print($rows[0]['body']); ?>
     </div>
     <div class="image">
@@ -29,7 +29,7 @@
     </div>
 </article>
 
-<div class="h1 titre"><span>Uti en dates</span></div>
+<div class="h1 titre"><span><?php echo t('Uti en dates'); ?></span></div>
 <div class="block-4 clearfix">
     <div class="carreau bg-vert">
         <a href="#box-1" class="content fancybox">
@@ -38,7 +38,7 @@
            ?>  
             <div class="annee"><?php echo $tabDate1[0];?></div>
             <div class="titre"><?php echo $tabDate1[1];?></div>
-            <div class="savoir-plus">En savoir +</div>
+            <div class="savoir-plus"><?php echo t('En savoir +'); ?></div>
             <div class="arrow-right"></div>
         </a>
         <div id="box-1" style="display:none;">
@@ -55,7 +55,7 @@
         <a href="#box-2" class="content fancybox">
             <div class="annee"><?php echo $tabDate2[0];?></div>
             <div class="titre"><?php echo $tabDate2[1];?></div>
-            <div class="savoir-plus">En savoir +</div>
+            <div class="savoir-plus"><?php echo t('En savoir +'); ?></div>
             <div class="arrow-right"></div>
         </a>
         <div id="box-2" style="display:none;">
@@ -101,7 +101,7 @@
 
 <div class="h1 titre"><span>Le mot du président</span></div>
 <div class="clearfix block-5">
-    <div class="left left-wrapper texte">
+    <div class="left left-wrapper texte content-wysiwyg">
       <?php echo $rows[0]['field_mot_president_groupe']; ?>
     </div>
     <div class="right-wrapper right video">
