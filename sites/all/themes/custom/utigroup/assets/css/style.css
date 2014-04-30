@@ -273,3 +273,33 @@ font-family: 'androgyneregular';
 .fancybox-content .color{font-size:14px;font-weight:bold;}
 .fancybox-close{width:10px;height:10px;top: 10px;right: 10px;}
 .fancybox-opened {margin-left: 9px;}
+
+/**
+	USER
+**/
+#user-login{
+	width: 400px;
+	margin: 0 auto;
+}
+#user-login .form-item label{
+	font-weight: bold;
+}
+#user-login.form-actions.form-wrapper{
+	overflow: hidden;
+}
+#user-login .form-submit{
+	background: #036;
+	border: 0;
+	padding: 7px 20px;
+	margin: 0;
+	-webkit-border-top-left-radius: 10px;
+	-moz-border-radius-topleft: 10px;
+	border-top-left-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-moz-border-radius-bottomright: 10px;
+	border-bottom-right-radius: 10px;
+	color: #FFF;
+	font-weight: bold;
+	float: right;
+}
+#user-login .form-item .description{ color: #999; font-size: 11px;}
