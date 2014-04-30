@@ -14,18 +14,35 @@ function utigroup_preprocess_html(&$vars) {
     drupal_add_js(base_path() . path_to_theme() . '/assets/js/script.js', array('type' => 'file', 'scope' => 'footer'));
     drupal_add_js(base_path() . path_to_theme() . '/assets/js/custom.js', array('type' => 'file', 'scope' => 'footer'));
   
-  if (arg(0) == "activites") {
-        $vars['classes_array'][] = 'blue-ciel-theme';
-    } 
-  if (arg(0) == "secteurs") {
-        $vars['classes_array'][] = 'vert-theme';
-    } 
-   if (arg(0) == "groupe") {
-        $vars['classes_array'][] = 'blue-theme';
-    } 
-  if (arg(0) == "recrutement" || arg(0) == "integration" || arg(0) == "suivi-de-carriere" || arg(0) == "vie-dans-lentreprise") {
-        $vars['classes_array'][] = 'rose-theme';
-    }  
+
+
+    $_arg_a = arg(0);
+    switch ($_arg_a) {
+        case "activites":
+            $vars['classes_array'][] = 'blue-ciel-theme';
+            break;
+        case "secteurs":
+            $vars['classes_array'][] = 'vert-theme';
+            break;
+        case "groupe":
+            $vars['classes_array'][] = 'blue-theme';
+            break;
+        case "recrutement":
+        case "rejoignez-nous":
+        case "suivi-de-carriere":
+        case "vie-dans-lentreprise":
+            $vars['classes_array'][] = 'rose-theme';
+            break;
+    }
+
+
+
+
+  
+
+      /*case 'donnees':
+            $vars["theme_hook_suggestions"][] = "page__donnes";
+            break; */
     
 }
 
@@ -126,4 +143,20 @@ function utigroup_global_functions_exist($e){
 
 function utigroup_global_functions_active_menu($id_active, $id){
     return ($id_active == $id)? " active " : "";
+}
+
+
+function utigroup_functions_menu() {
+    $items['donnees'] = array(
+        'title' => 'Lien ',
+        'page callback' => 'get_latest_news',
+        'access arguments' => array('access content'),
+        'type' => MENU_CALLBACK,
+    );
+    
+    return $items;
+}
+
+function get_latest_news() {
+    return array();
 }

@@ -35,7 +35,7 @@
                     <?php print render($tabs); ?>
                 </div>
             <?php endif; ?> 
-            <?php print render($page['content']); ?> 
+            testsssssssssssss
         </div>
 
          <section class="nos-client">
