@@ -36,7 +36,7 @@
 .clearfix {
   zoom: 1;
 }
-b,strong{font-weight:bold;}
+b,strong,.bold{font-weight:bold;}
 .left{float:left;}
 .right{float:right;}
 .display-none{display:none;}
@@ -63,3 +63,5 @@ b,strong{font-weight:bold;}
 
 .bg-vert{background:#9C3!important;}
 .color-vert{color:#9C3;}
+
+.picto-pdf{display:inline-block;width:16px;height:16px;padding:4px;background: url(../img/picto-pdf.jpg) center center no-repeat;text-indent: -9999px; }

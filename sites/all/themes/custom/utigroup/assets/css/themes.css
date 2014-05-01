@@ -12,17 +12,21 @@
 .blue-theme.body .fancybox-titre,
 .blue-theme .bg-color,
 .blue-theme .block-4 .carreau,
-.blue-theme .main .sidebar .button-section {
+.blue-theme .main .sidebar .button-section ,
+.blue-theme .block-7 table thead tr, 
+.blue-theme .block-7 table tfoot tr {
 	background-color:#003366;
 }
 
-.blue-theme.body  .fancybox-content .color,.blue-theme.body .color{
+.blue-theme.body  .fancybox-content .color,.blue-theme.body .color,
+.blue-theme.body .block-7 .titre {
 	color:#003366;
 }
 
 .blue-theme.body .main .main-content .block-1 .content,
 .blue-theme.body .main .main-content .block-2,
-.blue-theme.body .main .main-content .block-3{
+.blue-theme.body .main .main-content .block-3,
+.blue-theme .block-7 table{
 	border-color:#003366;
 }
 .blue-theme.body .block-3 .get-all:hover{
@@ -45,17 +49,21 @@
 .blue-ciel-theme.body .fancybox-titre,
 .blue-ciel-theme .bg-color,
 .blue-ciel-theme .block-4 .carreau,
-.blue-ciel-theme .main .sidebar .button-section {
+.blue-ciel-theme .main .sidebar .button-section,
+.blue-ciel-theme .block-7 table thead tr, 
+.blue-ciel-theme .block-7 table tfoot tr {
 	background-color:#33cccc;
 }
 
-.blue-ciel-theme.body  .fancybox-content .color,.blue-ciel-theme.body .color{
+.blue-ciel-theme.body  .fancybox-content .color,.blue-ciel-theme.body .color,
+.blue-ciel-theme.body .block-7 .titre{
 	color:#33cccc;
 }
 
 .blue-ciel-theme.body .main .main-content .block-1 .content,
 .blue-ciel-theme.body .main .main-content .block-2,
-.blue-ciel-theme.body .main .main-content .block-3{
+.blue-ciel-theme.body .main .main-content .block-3,
+.blue-ciel-theme .block-7 table{
 	border-color:#33cccc;
 }
 .blue-ciel-theme.body .block-3 .get-all:hover{
@@ -80,17 +88,21 @@
 .vert-theme.body .fancybox-titre,
 .vert-theme .bg-color,
 .vert-theme .block-4 .carreau,
-.vert-theme .main .sidebar .button-section{
+.vert-theme .main .sidebar .button-section,
+.vert-theme .block-7 table thead tr, 
+.vert-theme .block-7 table tfoot tr{
 	background-color:#9C3;
 }
 
-.vert-theme.body  .fancybox-content .color,.vert-theme.body .color{
+.vert-theme.body  .fancybox-content .color,.vert-theme.body .color,
+.vert-theme.body .block-7 .titre {
 	color:#9C3;
 }
 
 .vert-theme.body .main .main-content .block-1 .content,
 .vert-theme.body .main .main-content .block-2,
-.vert-theme.body .main .main-content .block-3{
+.vert-theme.body .main .main-content .block-3,
+.vert-theme .block-7 table{
 	border-color:#9C3;
 }
 .vert-theme.body .block-3 .get-all:hover{
@@ -115,17 +127,21 @@
 .rose-theme.body .fancybox-titre,
 .rose-theme .bg-color,
 .rose-theme .block-4 .carreau,
-.rose-theme .main .sidebar .button-section {
+.rose-theme .main .sidebar .button-section ,
+.rose-theme .block-7 table thead tr, 
+.rose-theme .block-7 table tfoot tr{
 	background-color:#C06;
 }
 
-.rose-theme.body  .fancybox-content .color,.rose-theme.body .color{
+.rose-theme.body  .fancybox-content .color,.rose-theme.body .color,
+.rose-theme.body .block-7 .titre {
 	color:#C06;
 }
 
 .rose-theme.body .main .main-content .block-1 .content,
 .rose-theme.body .main .main-content .block-2,
-.rose-theme.body .main .main-content .block-3{
+.rose-theme.body .main .main-content .block-3,
+.rose-theme .block-7 table{
 	border-color:#C06;
 }
 .rose-theme.body .block-3 .get-all:hover{
@@ -149,17 +165,21 @@
 .mauve-theme.body .fancybox-titre,
 .mauve-theme .bg-color ,
 .mauve-theme .block-4 .carreau,
-.mauve-theme .main .sidebar .button-section {
+.mauve-theme .main .sidebar .button-section,
+.mauve-theme .block-7 table thead tr, 
+.mauve-theme .block-7 table tfoot tr {
 	background-color:#5F2181;
 }
 
-.mauve-theme.body  .fancybox-content .color,.mauve-theme.body .color{
+.mauve-theme.body  .fancybox-content .color,.mauve-theme.body .color,
+.mauve-theme.body .block-7 .titre {
 	color:#5F2181;
 }
 
 .mauve-theme.body .main .main-content .block-1 .content,
 .mauve-theme.body .main .main-content .block-2,
-.rose-theme.body .main .main-content .block-3{
+.mauve-theme.body .main .main-content .block-3,
+.mauve-theme .block-7 table{
 	border-color:#5F2181;
 }
 .mauve-theme.body .block-3 .get-all:hover{
@@ -184,17 +204,21 @@
 .violet-theme.body .fancybox-titre,
 .violet-theme .bg-color,
 .violet-theme .block-4 .carreau,
-.violet-theme .main .sidebar .button-section {
+.violet-theme .main .sidebar .button-section,
+.violet-theme .block-7 table thead tr, 
+.violet-theme .block-7 table tfoot tr {
 	background-color:#969;
 }
 
-.violet-theme.body  .fancybox-content .color,.violet-theme.body .color{
+.violet-theme.body  .fancybox-content .color,.violet-theme.body .color,
+.violet-theme.body .block-7 .titre {
 	color:#969;
 }
 
 .violet-theme.body .main .main-content .block-1 .content,
 .violet-theme.body .main .main-content .block-2,
-.rose-theme.body .main .main-content .block-3{
+.violet-theme.body .main .main-content .block-3,
+.violet-theme .block-7 table{
 	border-color:#969;
 }
 .violet-theme.body .block-3 .get-all:hover{
