@@ -87,24 +87,3 @@
 
     print render($content);
 ?>
-<br><br>
-<h1 class="titre"><span>Actualités</span></h1>
-<article class="block-1">
-    <h2 class="titre">Titre block-1</h2>
-    <div class="content">this is a simple text <br>this is a simple text <br>this is a simple text <br>this is a simple text <br></div>
-</article>
-
-<article class="block-1">
-    <h2 class="titre">Titre block-1</h2>
-    <div class="content"><a href="">this is a text with url </a><br><a href="">this is a text with url </a><br><a href="">this is a text with url </a><br><a href="">this is a text with url </a><br></div>
-</article>
-
-<article class="block-1">
-    <h2 class="titre">Titre block-1</h2>
-    <div class="content"><u>this is an underline text</u><br><u>this is an underline text</u><br><u>this is an underline text</u><br><u>this is an underline text</u><br></div>
-</article>
-
-<article class="block-1">
-    <h2 class="titre">Titre block-1</h2>
-    <div class="content"><b>this is an bold text</b><br><b>this is an bold text</b><br><b>this is an bold text</b><br><b>this is an bold text</b><br></div>
-</article>
