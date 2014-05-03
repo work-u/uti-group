@@ -342,3 +342,72 @@ font-family: 'androgyneregular';
 	width: 60%;
 	margin: 0 auto;
 }
+
+
+.donnes-nav{
+	overflow: hidden;
+}
+.donnes-nav li{
+	float: left;
+	padding: 6px 4px;
+}
+.donnes-nav li a{
+	width: 108px;
+	height: 40px;
+	padding: 60px 25px 10px 25px;
+	display: block;
+	background-color: #5f2181;
+	-webkit-border-top-left-radius: 25px;
+	-moz-border-radius-topleft: 25px;
+	border-top-left-radius: 25px;
+	-webkit-border-bottom-right-radius: 25px;
+	-moz-border-radius-bottomright: 25px;
+	border-bottom-right-radius: 25px;
+	color: #fff;
+	font-family: 'androgyneregular';
+	font-size: 18px;
+	text-align: center;
+	text-decoration: none;
+	background-image: url(../img/menu-donneer.png);
+	background-repeat: no-repeat;
+	line-height: 20px;
+}
+.donnes-nav li.one-line a{
+	line-height: 40px;
+}
+.donnes-nav li.ico-01 a,.donnes-nav li.ico-actionnaires{
+	background-position: 0 0;
+}
+.donnes-nav li.ico-02 a ,.donnes-nav li.ico-direction-generale a{
+	background-position: -160px 0;
+}
+.donnes-nav li.ico-03 a ,.donnes-nav li.ico-nos-implantations a{
+	background-position: -316px 0;
+}
+.donnes-nav li.ico-04 a ,.donnes-nav li.ico-comptes-consolides a{
+	background-position: -474px 0;
+}
+.donnes-nav li.ico-05 a ,.donnes-nav li.ico-chiffre-d-affaires a{
+	background-position: 0 -110px;
+}
+.donnes-nav li.ico-06 a ,.donnes-nav li.ico-resultats-par-filiales a{
+	background-position: -160px -110px;
+}
+.donnes-nav li.ico-07 a ,.donnes-nav li.ico-documents-financiers a{
+	background-position: -316px -110px;
+}
+.donnes-nav li.ico-08 a ,.donnes-nav li.ico-actualites a{
+	background-position: -474px -110px;
+}
+.donnes-nav li.ico-09 a ,.donnes-nav li.ico-evenement a{
+	background-position: 0 -220px;
+}
+.donnes-nav li.ico-010 a ,.donnes-nav li.ico-assemblees-generales a{
+	background-position: -160px -220px;
+}
+.donnes-nav li.ico-011 a ,.donnes-nav li.ico-contacts a{
+	background-position: -316px -220px;
+}
+.donnes-nav li.ico-012 a ,.donnes-nav li.ico-alertes-e-mail a{
+	background-position: -474px -220px;
+}
