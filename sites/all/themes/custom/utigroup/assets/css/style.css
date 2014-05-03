@@ -254,7 +254,7 @@ font-family: 'androgyneregular';
 .block-7 table thead tr,.block-7 table tfoot tr{font-size:16px;background:#C06;color:#fff;}
 .block-7 table thead tr th{font-size:16px;}
 .block-7 table tfoot tr td{font-size:12px;font-weight:bold;padding-top:7px;padding-bottom:7px;}
-.block-7 table td,.block-7 table th{padding:5px 10px;}
+.block-7 table td,.block-7 table th{padding:5px 10px;vertical-align: middle;}
 .block-7 table th.col1,.block-7 table td.col1{width:60%;}
 .block-7 table th.col2,.block-7 table td.col2{width:20%;}
 .block-7 table th.col3,.block-7 table td.col3{width:20%;}
@@ -271,6 +271,13 @@ font-family: 'androgyneregular';
 .block-7 table th.w90,.block-7 table td.w90{width:90%;}
 .block-7 table th.w100,.block-7 table td.w100{width:100%;}
 
+.block-7 .left-wrapper{width:170px}
+.block-7 .right-wrapper{width:494px;}
+
+.block-7 .menu-annee {list-style:none;}
+.block-7 .menu-annee li{padding:0 0 4px 0;}
+.block-7 .menu-annee a{display:block;text-decoration:none;color:#000;padding:}
+.block-7 .menu-annee a:hover, .block-7 .menu-annee a.active{font-weight:bold;color:#5F2181;}
 
 /*FANCYBOX CUSTUM*/
 .fancybox-titre{
