@@ -56,7 +56,7 @@
         <div id="box-<?php echo $i; ?>" style="display:none;">
             <div class="fancybox-titre"><?php echo $value;?></div>
             <div class="fancybox-content">
-               <?php if(isset($tabSavoir[$i])) $tabSavoir[$i];?>
+               <?php if(isset($tabSavoir[$i])) echo $tabSavoir[$i];?>
             </div>
         </div>
     </div>
@@ -86,8 +86,8 @@
         </div>
         <div class="info">
             <div class="nom"><?php echo $img[1][$i];?></div>
-            <div class="statut color">Changé de recrutement</div>
-            <div class="pays"><?php echo $img[2][$i];?></div>
+            <div class="statut color"><?php echo $img[2][$i];?></div>
+            <div class="pays"><?php //echo $img[2][$i];?>Paris</div>
         </div>
     </div>
    <?php $i++; } ?>   

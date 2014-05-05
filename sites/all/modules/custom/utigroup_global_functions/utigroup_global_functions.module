@@ -16,9 +16,25 @@
  *   boolean.
  */
 
-function utigroup_global_functions_exist(e){
-    if(isset(e) && !empty(e))
-        return e;
+function utigroup_global_functions_exist($e){
+    if(isset($e) && !empty($e))
+        return join(' ', $e);
     else
-    	return '';
+        return '';
+}
+
+
+function utigroup_global_functions_menu() {
+    $items['donnees'] = array(
+        'title' => 'Données financières',
+        'page callback' => 'get_latest_news',
+        'access arguments' => array('access content'),
+        'type' => MENU_CALLBACK,
+    );
+    
+    return $items;
+}
+
+function get_latest_news() {
+    return array();
 }

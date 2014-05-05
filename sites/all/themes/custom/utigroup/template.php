@@ -4,6 +4,7 @@
  * @param array $vars
  */
 function utigroup_preprocess_html(&$vars) {
+    
     drupal_add_js(base_path() . path_to_theme() . '/assets/js/plugins/modernizr.custom.js', array('type' => 'file', 'scope' => 'header'));
     drupal_add_js(base_path() . path_to_theme() . '/assets/js/plugins/respond.js', array('type' => 'file', 'scope' => 'header'));
     drupal_add_js(base_path() . path_to_theme() . '/assets/js/jQuery/jquery.min.js', array('type' => 'file', 'scope' => 'header'));
@@ -28,22 +29,18 @@ function utigroup_preprocess_html(&$vars) {
             $vars['classes_array'][] = 'blue-theme';
             break;
         case "recrutement":
+        case "application":    
         case "rejoignez-nous":
         case "suivi-de-carriere":
-        case "vie-dans-lentreprise":
+        case "annonces":
+        case "vie-dans-lentreprise": 
             $vars['classes_array'][] = 'rose-theme';
             break;
-    }
-
-
-
-
-  
-
-      /*case 'donnees':
-            $vars["theme_hook_suggestions"][] = "page__donnes";
-            break; */
+    } 
     
+   if ((arg(0) == 'node' && is_numeric(arg(1))) || (arg(0) == 'documents-financiers') || (arg(0) == 'communiques-de-presse') ){
+     $vars['classes_array'][] = 'mauve-theme';  
+   } 
 }
 
 
@@ -60,6 +57,12 @@ function utigroup_preprocess_page(&$vars, $hook) {
  $vars['menu_supeieur'] = utigroup_menuSupeieur();
  $vars['menu_footer'] = utigroup_get_this_menu('menu-menu-footer');
  $vars['menu_footer_social'] = utigroup_get_this_menu('menu-menu-footer-social');
+ if(arg(0) == "donnees"){
+          $vars["theme_hook_suggestions"][] = "page__donnees";         
+    }
+ if(arg(0) == "annonces"){
+          $vars["theme_hook_suggestions"][] = "page__annonces";         
+    }   
 }
 
 /*
@@ -134,29 +137,8 @@ function utigroup_get_this_menu($this_menu) {
 
     return $content;
 }
-function utigroup_global_functions_exist($e){
-    if(isset($e) && !empty($e))
-        return join(' ', $e);
-    else
-        return '';
-}
 
 function utigroup_global_functions_active_menu($id_active, $id){
     return ($id_active == $id)? " active " : "";
 }
 
-
-function utigroup_functions_menu() {
-    $items['donnees'] = array(
-        'title' => 'Lien ',
-        'page callback' => 'get_latest_news',
-        'access arguments' => array('access content'),
-        'type' => MENU_CALLBACK,
-    );
-    
-    return $items;
-}
-
-function get_latest_news() {
-    return array();
-}

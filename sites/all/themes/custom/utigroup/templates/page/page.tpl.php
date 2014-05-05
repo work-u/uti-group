@@ -51,10 +51,10 @@
                 </ul>
                 </section>
            <?php 
-             if (arg(0) == "recrutement" || arg(0) == "integration" || arg(0) == "suivi-de-carriere"  || arg(0) == "vie-dans-lentreprise") {
+             if (arg(0) == "annonces" || arg(0) == "rejoignez-nous" || arg(0) == "application" || arg(0) == "recrutement" || arg(0) == "integration" || arg(0) == "suivi-de-carriere"  || arg(0) == "vie-dans-lentreprise") {
            ?> 
-                <a href="#" class="button-section">Candidature<span class="arrow-left"></span></a>
-                <a href="#" class="button-section">Annonces<span class="arrow-left"></span></a> 
+                <a href="<?php echo url('application/add/recruit_application'); ?>" class="button-section">Candidature<span class="arrow-left"></span></a>
+                <a href="<?php echo url('annonces'); ?>" class="button-section">Annonces<span class="arrow-left"></span></a> 
             <?php  } ?>   
         </aside>
     </div>

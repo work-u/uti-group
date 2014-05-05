@@ -85,5 +85,8 @@
     hide($content['comments']);
     hide($content['links']);
 
-    print render($content);
-?>
+?>    
+<div class="h1 titre"><span><?php echo $content['body']['#object']->title; ?></span></div> 
+<div class="clearfix block-5">
+         <?php echo $content['body']['#object']->body['und'][0]['value']; ?>
+</div> 

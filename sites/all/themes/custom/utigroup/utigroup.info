@@ -11,6 +11,7 @@ stylesheets[all][] = assets/css/global.css
 stylesheets[all][] = assets/css/menu.css
 stylesheets[all][] = assets/css/style.css
 stylesheets[all][] = assets/js/plugins/fancybox/jquery.fancybox.css
+stylesheets[all][] = assets/css/editor.css
 stylesheets[all][] = assets/css/custom.css
 
 
