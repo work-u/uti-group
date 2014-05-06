@@ -42,9 +42,11 @@
         </div>
 
          <section class="nos-client">
-            <h2 class="titre">Nos clients</h2>
-                <img src="<?php echo base_path().drupal_get_path('theme', 'utigroup'); ?>/assets/img/logo-mutuelle.jpg" />
-        </section>
+                <div id="slider_nos_client" style="position: relative; top: 0px; left: 0px; width: 160px; height: 100px;">
+                    <?php print render($page['clients_side_bar']); ?>
+                 </div>
+            </section>
+
         <aside class="sidebar">
                 <section class="dernieres-offres">
                 <h2 class="titre">Nos dernières offres d'emploi</h2>

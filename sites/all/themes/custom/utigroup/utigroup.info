@@ -16,6 +16,7 @@ stylesheets[all][] = assets/css/custom.css
 
 
 regions[slide_home]                = slide home
+regions[clients_side_bar]          = Clients side bar
 regions[actualites_home]           = Actualites home
 regions[navigation]                = Navigation
 regions[footer_block]              = footer block

@@ -88,7 +88,7 @@ function utigroup_menuSupeieur() {
         //print_r($menu['link']);
 		if ($menu['link']['depth'] == 1 && !$menu['link']['hidden'] ) {  
                 //print_r($menu['link']);              
-                $content .= '<li class=" '. utigroup_global_functions_active_menu( $active_link['mlid'] ,$menu['link']['mlid']) .' '.utigroup_global_functions_exist($menu['link']['options']['attributes']['class']).'"><a href="'.url($menu['link']['href']).'">'.$menu['link']['link_title'] . '</a>'; //1 niveau                
+                $content .= '<li class=" '. utigroup_global_functions_active_menu( $active_link['mlid'] ,$menu['link']['mlid']) .' '.utigroup_global_functions_exist($menu['link']['options']['attributes']['class']).'"><a href="'.url($menu['link']['href']).'">'.$menu['link']['link_title'] . '</a>'; //1 niveau
                  if (!empty($menu['below'])) {
                      $content .= '<ul>'; //2 niveau
                      foreach ($menu['below'] as $menub):

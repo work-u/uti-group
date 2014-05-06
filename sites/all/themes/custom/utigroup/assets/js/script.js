@@ -28,5 +28,13 @@ jQuery(document).ready(function ($) {
 		}
 	};
 	
+	var options_jssorSlider_clients = {
+		$AutoPlay: true
+	};
+	
 	var jssor_slider1 = new $JssorSlider$("slider1_container", options_jssorSlider);
+	
+	var jssor_slider_clients = new $JssorSlider$("slider_nos_client", options_jssorSlider_clients);	
+	
+	
 });

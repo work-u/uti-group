@@ -44,7 +44,23 @@ margin-left: 2px;
 .menu-principale > nav > ul > li:hover > ul {display:block;}
 .menu-principale > nav > ul > li > ul > li {float:left;height:24px;line-height:24px;height: 18px;line-height: 18px;}
 .menu-principale > nav > ul > li > ul > li > a{text-decoration:none;font-size:11px;font-weight:bold;color:#808080;border-left:solid 1px #808080;padding: 0 5px;}
-.menu-principale> nav  > ul > li > ul > li > a:hover{text-decoration:none;font-size:11px;font-weight:bold;color:#003366;}
+.menu-principale > nav  > ul > li > ul > li > a:hover{text-decoration:none;font-size:11px;font-weight:bold;color:#003366;}
 .menu-principale > nav > ul > li > ul > li:first-child > a {border-left:0;padding-left:0;}
 .menu-principale nav > ul > li.sub-menu-right > ul {right: 0px;left:inherit;}
 
+
+.menu-principale > nav  > ul > li.blue-ciel > ul > li > a:hover,
+.menu-principale > nav  > ul > li.blue-ciel > ul > li > a.active,
+.menu-principale > nav  > ul > li.blue-ciel > ul > li.active > a{color:#3CC;}
+.menu-principale > nav  > ul > li.vert 		> ul > li > a:hover,
+.menu-principale > nav  > ul > li.vert 		> ul > li > a.active,
+.menu-principale > nav  > ul > li.vert 		> ul > li.active > a{color:#9C3;}
+.menu-principale > nav  > ul > li.rose  	> ul > li > a:hover,
+.menu-principale > nav  > ul > li.rose  	> ul > li > a.active,
+.menu-principale > nav  > ul > li.rose  	> ul > li.active > a{color:#C06;}
+.menu-principale > nav  > ul > li.mauve 	> ul > li > a:hover,
+.menu-principale > nav  > ul > li.mauve 	> ul > li > a.active,
+.menu-principale > nav  > ul > li.mauve 	> ul > li.active > a{color:#5F2181;}
+.menu-principale > nav  > ul > li.violet 	> ul > li > a:hover,
+.menu-principale > nav  > ul > li.violet 	> ul > li > a.active,
+.menu-principale > nav  > ul > li.violet 	> ul > li.active > a{color:#969;}
