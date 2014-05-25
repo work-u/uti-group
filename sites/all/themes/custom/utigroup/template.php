@@ -54,15 +54,19 @@ function utigroup_preprocess_html(&$vars) {
  * @param array $hook
  */
 function utigroup_preprocess_page(&$vars, $hook) {
- $vars['menu_supeieur'] = utigroup_menuSupeieur();
- $vars['menu_footer'] = utigroup_get_this_menu('menu-menu-footer');
- $vars['menu_footer_social'] = utigroup_get_this_menu('menu-menu-footer-social');
- if(arg(0) == "donnees"){
+     $vars['menu_supeieur'] = utigroup_menuSupeieur();
+     $vars['menu_footer'] = utigroup_get_this_menu('menu-menu-footer');
+     $vars['menu_footer_social'] = utigroup_get_this_menu('menu-menu-footer-social');
+    if(arg(0) == "donnees"){
           $vars["theme_hook_suggestions"][] = "page__donnees";         
     }
- if(arg(0) == "annonces"){
+    if(arg(0) == "annonces"){
           $vars["theme_hook_suggestions"][] = "page__annonces";         
     }   
+    if(arg(0) == "application" && arg(2) == "candidature"){
+        $vars["theme_hook_suggestions"][] = "page__candidature";         
+
+    }
 }
 
 /*

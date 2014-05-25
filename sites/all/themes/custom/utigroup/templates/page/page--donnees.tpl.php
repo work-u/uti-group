@@ -35,7 +35,7 @@
                     <?php print render($tabs); ?>
                 </div>
             <?php endif; ?> 
-            <!-- <div class="h1 titre"><span>Contacts</span></div> -->
+            <!-- <div class="h1 titre"><span><?php echo t('Candidature'); ?></span></div> -->
             <div class="clearfix block-5">
                  <nav class="donnes-nav">
                         <ul>
@@ -73,8 +73,8 @@
            <?php 
              if (arg(0) == "recrutement" || arg(0) == "integration" || arg(0) == "suivi-de-carriere"  || arg(0) == "vie-dans-lentreprise") {
            ?> 
-                <a href="#" class="button-section">Candidature<span class="arrow-left"></span></a>
-                <a href="#" class="button-section">Annonces<span class="arrow-left"></span></a> 
+                <a href="#" class="button-section"><?php l('Candidature'); ?><span class="arrow-left"></span></a>
+                <a href="#" class="button-section"><?php l('Annonces'); ?><span class="arrow-left"></span></a> 
             <?php  } ?>   
         </aside>
     </div>

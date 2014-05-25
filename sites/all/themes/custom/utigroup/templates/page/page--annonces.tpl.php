@@ -22,7 +22,7 @@
     </div>
 </header>
 <!--main -->
-<div class="main page">
+<div class="main page page-annonces">
     <div class="main-wrapper">
         <div class="main-content">
             <?php if (isset($messages)): ?>
@@ -35,8 +35,9 @@
                     <?php print render($tabs); ?>
                 </div>
             <?php endif; ?> 
-            <div class="h1 titre"><span>Annonces</span></div>
-            <div class="clearfix block-5">
+            <div class="h1 titre"><span><?php echo t('Annonces'); ?></span></div>
+            <div class="h2 sub-title"><?php echo t('Nos offres d\'emploi'); ?></div>
+            <div class="clearfix block-5 page-annonces-content">
                   <?php print render($page['content']); ?>
             </div>  
         </div>
@@ -58,8 +59,8 @@
            <?php 
              if (arg(0) == "annonces" || arg(0) == "rejoignez-nous" || arg(0) == "application" || arg(0) == "recrutement" || arg(0) == "integration" || arg(0) == "suivi-de-carriere"  || arg(0) == "vie-dans-lentreprise") {
            ?> 
-                <a href="<?php echo url('application/add/recruit_application'); ?>" class="button-section">Candidature<span class="arrow-left"></span></a>
-                <a href="<?php echo url('annonces'); ?>" class="button-section">Annonces<span class="arrow-left"></span></a> 
+                <a href="<?php echo url('application/add/candidature'); ?>" class="button-section"><?php echo t('Candidature'); ?><span class="arrow-left"></span></a>
+                <a href="<?php echo url('annonces'); ?>" class="button-section"><?php echo t('Annonces'); ?><span class="arrow-left"></span></a> 
             <?php  } ?>     
         </aside>
     </div>
