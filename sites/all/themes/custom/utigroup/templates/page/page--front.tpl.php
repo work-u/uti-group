@@ -46,10 +46,7 @@
 
             <section class="dernieres-offres">
                 <h2 class="titre"><?php echo t("Nos dernières offres d'emploi"); ?></h2>
-                <ul>
-                    <li><a href="#">> Analyste Programmeur<br>Grand Système Assurance</a></li>
-                    <li><a href="#">> Analyste Développeur <br>Oracle</a></li>
-                </ul>
+					<?php print render($page['last_offres']); ?> 
             </section>
             
                <?php print render($page['footer_block']); ?>            

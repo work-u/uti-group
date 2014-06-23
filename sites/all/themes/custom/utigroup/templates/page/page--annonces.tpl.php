@@ -51,10 +51,7 @@
         <aside class="sidebar">
                 <section class="dernieres-offres">
                 <h2 class="titre">Nos dernières offres d'emploi</h2>
-                <ul>
-                        <li><a href="#">> Analyste Programmeur<br>Grand Système Assurance</a></li>
-                        <li><a href="#">> Analyste Développeur <br>Oracle</a></li>
-                </ul>
+					<?php print render($page['last_offres']); ?> 
                 </section>
            <?php 
              if (arg(0) == "annonces" || arg(0) == "rejoignez-nous" || arg(0) == "application" || arg(0) == "recrutement" || arg(0) == "integration" || arg(0) == "suivi-de-carriere"  || arg(0) == "vie-dans-lentreprise") {

@@ -390,7 +390,7 @@ footer.footer > .footer-wrapper > .logo-footer
 }
 .main .main-content .titre span
 {
-	background: url(../img/fleche-gris.png) top center no-repeat;
+	background: url(../img/fleche-gris.png) 30px 0 no-repeat;
 	padding: 30px 0 0 0;
 }
 .main .main-content .block-1
@@ -1317,4 +1317,21 @@ footer.footer > .footer-wrapper > .logo-footer
 .page-candidature .page-candidature-content .form-type-managed-file label,
 .page-candidature .page-candidature-content .form-type-managed-file .form-submit{
 	display: none;
+}
+.implontation-select .implontation-title{
+	color: #003365; /* text color */
+	font-size: 20px;
+	margin-bottom: 15px;
+}
+.implontation-select .implontation-adresse{
+	color: #808080; /* text color */
+	font-size: 14px;
+	margin-bottom: 15px;
+}
+.implontation-select .implontation-adresse p{
+	margin-bottom: 10px;
+}
+.implontation-select .implontation-description{
+	color: #000; /* text color */
+	font-size: 12px;
 }

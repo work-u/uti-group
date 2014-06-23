@@ -38,9 +38,17 @@ function utigroup_preprocess_html(&$vars) {
             break;
     } 
     
-   if ((arg(0) == 'node' && is_numeric(arg(1))) || (arg(0) == 'documents-financiers') || (arg(0) == 'communiques-de-presse') ){
+    if ((arg(0) == 'documents-financiers') || (arg(0) == 'communiques-de-presse') ){
      $vars['classes_array'][] = 'mauve-theme';  
    } 
+   if ((arg(0) == 'node' && is_numeric(arg(1))) ){
+        $node = node_load(arg(1));           
+        if($node->type == "recruit_job"){ 
+             $vars['classes_array'][] = 'rose-theme';
+         }else{
+             $vars['classes_array'][] = 'mauve-theme'; 
+         }
+   }
 }
 
 

@@ -42,6 +42,7 @@ regions[etudes_events_left_footer] = Etudes Events left footer
 regions[triptych_first]             = First Triptych
 regions[triptych_second]            = Second Triptych
 regions[triptych_third]             = Third Triptych
+regions[last_offres] 		    = Last offres
 
 
 regions[bottom_presentation]        = Bottom Presentation
