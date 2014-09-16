@@ -46,7 +46,7 @@ margin-left: 2px;
 .menu-principale > nav > ul > li > ul > li > a{text-decoration:none;font-size:11px;font-weight:bold;color:#808080;border-left:solid 1px #808080;padding: 0 5px;}
 .menu-principale > nav  > ul > li > ul > li > a:hover{text-decoration:none;font-size:11px;font-weight:bold;color:#003366;}
 .menu-principale > nav > ul > li > ul > li:first-child > a {border-left:0;padding-left:0;}
-.menu-principale nav > ul > li.sub-menu-right > ul {right: 0px;left:inherit;}
+.menu-principale nav > ul > li.sub-menu-right > ul {right: 0px;left:inherit; padding-bottom: 20px;}
 
 
 .menu-principale > nav  > ul > li.blue-ciel > ul > li > a:hover,
