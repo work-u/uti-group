@@ -13,3 +13,10 @@
 .fil-actu span.titre{
 	color: #003366;
 }
+.view-recrutement.view-id-recrutement > .view-content > .block-6.clearfix{
+	height: auto;
+	overflow: hidden;
+}
+.view-vie-dans-lentreprise .w2.block-4{
+	width: 510px;
+}

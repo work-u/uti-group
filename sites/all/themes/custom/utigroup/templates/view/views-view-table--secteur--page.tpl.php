@@ -47,7 +47,7 @@
                ?>
                    <div class="clearfix ligne">
                        <span class="left">
-                           > <?php echo $value;?>
+                           <a  href="#line-produits" class="fancybox right">&gt; <?php echo $value;?></a>
                        </span>
                    </div>
                <?php
@@ -83,7 +83,7 @@
                ?>
                    <div class="clearfix ligne">
                        <span class="left">
-                           > <?php echo $value;?>
+                           <a  href="#line-banques-finances" class="fancybox right">&gt; <?php echo $value;?></a>
                        </span>
                    </div>
                <?php
@@ -115,7 +115,7 @@
                ?>
                    <div class="clearfix ligne">
                        <span class="left">
-                           > <?php echo $value;?>
+                           <a  href="#line-assurances-mutuelle-retraite" class="fancybox right">&gt; <?php echo $value;?></a>
                        </span>
                    </div>
                <?php
@@ -146,7 +146,7 @@
                ?>
                    <div class="clearfix ligne">
                        <span class="left">
-                           > <?php echo $value;?>
+                           <a  href="#line-industrie-services" class="fancybox right">&gt; <?php echo $value;?></a>
                        </span>
                    </div>
                <?php

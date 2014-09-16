@@ -78,7 +78,8 @@
           $class = "left";  
         }else{
           $class = "right";   
-        }    
+        }
+		$imageTab = explode( ';', $img[2][$i] );
     ?> 
     <div class="personne <?php echo $class;?> clearfix">
         <div class="image">
@@ -86,8 +87,8 @@
         </div>
         <div class="info">
             <div class="nom"><?php echo $img[1][$i];?></div>
-            <div class="statut color"><?php echo $img[2][$i];?></div>
-            <div class="pays"><?php //echo $img[2][$i];?>Paris</div>
+            <div class="statut color"><?php echo $imageTab[0];?></div>
+            <div class="pays"><?php echo $imageTab[1];?></div>
         </div>
     </div>
    <?php $i++; } ?>   
